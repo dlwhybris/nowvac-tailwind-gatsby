@@ -3,7 +3,7 @@
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
   </a>
-<a href="https://tailwindcss.com/" target="_blank"><img width="60" src="https://tailwindcss.com/img/tailwind.svg"></a>
+<a href="https://tailwindcss.com/" target="_blank"><img width="100" src="https://tailwindcss.com/img/tailwind.svg"></a>
 </p>
 <h1 align="center">
   Gatsby-Tailwind-Blog-Starter
