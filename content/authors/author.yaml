@@ -1,11 +1,7 @@
 # content/author.yaml
 
 - id: eli
-  bio: Co Founder at Follow The Sun
+  bio: Lorem Ipsum
   name: Eli Colpaert
   avatar: ./eli.jpg
 
-- id: julie
-  bio: Co Founder at Follow The Sun
-  name: Julie Notredame
-  avatar: ./julie.jpg

@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Hero from "../components/hero";
 import Card from "../components/card";
 
 
@@ -21,7 +20,6 @@ class IndexPage extends React.Component {
           title="Follow The Sun"
           keywords={[`Follow`, `Sun`, `Vietnam`]}
         />
-        <Hero />
         <main className="py-4 mx-auto max-w-md xl:max-w-6xl  lg:max-w-4xl md:max-w-2xl sm:max-w-xl">
 
           <div className="flex flex-wrap w-full justify-between">
