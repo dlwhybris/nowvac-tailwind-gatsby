@@ -37,7 +37,7 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 For full documentation, visit [tailwindcss.com](https://tailwindcss.com/).
 
-- **For testing purposes without any installation, you can start with [Tailwind Run](https://tailwind.run/new).** It's a browser based editor loading Tailwind by default so can play around
+- **For testing purposes without any installation, you can start with [Tailwind Run](https://tailwind.run/new).** It's a browser based editor loading Tailwind by default so you can play around
 
 
 ## 📔 Learning Netlify CMS with Gatsby
