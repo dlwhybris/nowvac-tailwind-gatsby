@@ -17,8 +17,7 @@ class IndexPage extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title="Follow The Sun"
-          keywords={[`Follow`, `Sun`, `Vietnam`]}
+          title="Homepage"
         />
         <main className="py-4 mx-auto max-w-md xl:max-w-6xl  lg:max-w-4xl md:max-w-2xl sm:max-w-xl">
 

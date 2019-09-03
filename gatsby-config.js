@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `Gatsby Tailwind Starter`,
+    title: `Gatsby Tailwind Blog Starter`,
     author: `Eli Colpaert`,
-    description: `Gatsby Tailwind Starter`,
+    description: `Gatsby Tailwind Blog Starter including Netlify CMS`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     social: {
       twitter: `colpaerteli`,
@@ -111,7 +111,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Tailwind Starter`,
+        name: `Gatsby Tailwind Blog Starter`,
         short_name: `FTS`,
         start_url: `/`,
         background_color: `#ffffff`,

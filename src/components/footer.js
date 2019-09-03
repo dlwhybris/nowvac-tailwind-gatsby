@@ -22,9 +22,8 @@ function Footer() {
                 </nav>
             </div>
             <p className="text-center text-indigo-800 text-xs tracking-widest p-2 border-t-2 border-gray-300">
-                By&nbsp;<Link className="hover:text-indigo-900 font-semibold " to="/about-us">Julie</Link>
-                &nbsp;and&nbsp;
-                 <Link className="hover:text-indigo-900 font-semibold " to="/about-us">Eli</Link>
+                By&nbsp;
+                                 <Link className="hover:text-indigo-900 font-semibold " to="/about-us">Eli</Link>
             </p>
         </footer>
     );
