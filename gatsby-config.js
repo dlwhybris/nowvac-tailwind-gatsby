@@ -111,7 +111,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Tailwind Blog Starter`,
+        name: `Gatsby Tailwind Starter`,
         short_name: `FTS`,
         start_url: `/`,
         background_color: `#ffffff`,

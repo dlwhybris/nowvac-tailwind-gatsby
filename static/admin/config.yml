@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: azer53/follow-the-sun-react-tailwind
+  repo: azer53/gatsby-tailwind-starter
 
 media_folder: static/assets
 public_folder: /assets
@@ -17,6 +17,6 @@ collections:
       - { name: body, label: Body, widget: markdown }
       - { name: "cover",label: "Featured Image", widget: "image", required: true}
       - { name: "tags", label: "Tags",  widget: "list", default: ["news"]}
-      - { name: "author", label: "Author", widget: "select",options: ["julie","eli"]}
+      - { name: "author", label: "Author", widget: "select",options: ["eli"]}
 
 
