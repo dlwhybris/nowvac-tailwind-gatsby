@@ -19,7 +19,7 @@ export default class Recommendations extends Component {
             <FullCoverCard />
           </div>
 
-          <button className="my-12 mx-auto uppercase flex rounded-sm bg-gray-400 px-5 py-3 items-center text-sm tracking-wide font-medium text-black">
+          <button className="my-12 mx-auto uppercase flex rounded-lg bg-gray-400 px-5 py-3 items-center text-sm tracking-wide font-medium text-black hover:bg-gray-900 hover:text-white">
             <p>All Products</p>
             <svg
               className="fill-current"

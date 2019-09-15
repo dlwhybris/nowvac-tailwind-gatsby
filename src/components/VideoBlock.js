@@ -29,7 +29,7 @@ export default class VideoBlock extends Component {
                 shapes and dimensions. Available as a basic table-top model and
                 as a full option vacuum packaging machine.
               </p>
-              <button className="mt-6 uppercase flex rounded-sm bg-gray-400 px-5 py-3 items-center text-sm tracking-wide font-medium text-black">
+              <button className="mt-6 uppercase flex rounded-lg bg-gray-400 px-5 py-3 items-center text-sm tracking-wide font-medium text-black hover:bg-gray-900 hover:text-white">
                 <p>Learn More</p>
                 <svg
                   className="fill-current"

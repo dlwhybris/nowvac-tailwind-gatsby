@@ -24,7 +24,7 @@ export default class StoryCarousel extends Component {
               Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
               sem. Nulla consequat massa quis enim.
             </p>
-            <button className="mt-8 uppercase flex rounded-sm  px-5 py-3 items-center text-sm tracking-wide font-semibold border-2 hover:text-peach-400 hover:border-peach-400 hover:font-bold">
+            <button className="mt-8 uppercase flex rounded-lg  px-5 py-3 items-center text-sm tracking-wide font-semibold border-2 hover:text-peach-400 hover:border-peach-400 hover:font-bold">
               <p>Discover more</p>
               <svg
                 className="fill-current"
@@ -40,9 +40,9 @@ export default class StoryCarousel extends Component {
             </button>
           </div>
           <div className="w-full flex mx-auto justify-center py-4">
-            <div className="w-10 h-2 border-b-2 border-black mx-2"></div>
-            <div className="w-10 h-2 border-b-2 border-gray-500 mx-2"></div>
-            <div className="w-10 h-2 border-b-2 border-gray-500 mx-2"></div>
+            <div className="w-10 h-2 border-b-2 border-black mx-2 cursor-pointer"></div>
+            <div className="w-10 h-2 border-b-2 border-gray-500 mx-2 cursor-pointer"></div>
+            <div className="w-10 h-2 border-b-2 border-gray-500 mx-2 cursor-pointer"></div>
           </div>
         </section>
       </div>

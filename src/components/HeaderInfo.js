@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Link } from "gatsby"
 
 export default class HeaderInfo extends Component {
   render() {
@@ -10,8 +11,11 @@ export default class HeaderInfo extends Component {
             <span className="font-bold"> 50NOWVAC </span>
             till 23th of March!
           </p>
-          <div className="uppercase font-bold flex items-center hover:text-peach-500 h-8">
-            <a href="/">Further info</a>
+          <Link
+            className="uppercase font-bold flex items-center hover:text-peach-500 h-8"
+            to="/404"
+          >
+            Further info
             <svg
               className="fill-current"
               width="20"
@@ -23,7 +27,7 @@ export default class HeaderInfo extends Component {
                 fillRule="evenodd"
               ></path>
             </svg>
-          </div>
+          </Link>
         </div>
       </div>
     )
