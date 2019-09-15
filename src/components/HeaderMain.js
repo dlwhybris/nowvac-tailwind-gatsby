@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import LanguageSelector from "./LanguageSelector"
 import CurrencySelector from "./CurrencySelector"
+import { Link } from "gatsby"
 
 export default class HeaderMain extends Component {
   render() {
@@ -8,41 +9,67 @@ export default class HeaderMain extends Component {
       <div className="bg-white h-20 text-gray-900 font-bold text-sm">
         <nav className="w-10/12 mx-auto flex items-center h-full">
           <div className="w-2/12">
-            <img
-              className="w-40"
-              src="http://nowvac.ljft.de/assets/img/logo.png"
-              alt=""
-            />
-            <span className="text-xs font-hairline text-gray-500">
-              Earth's biggest vacuum store
-            </span>
+            <Link to="/">
+              <img
+                className="w-40"
+                src="http://nowvac.ljft.de/assets/img/logo.png"
+                alt=""
+              />
+              <span className="text-xs font-hairline text-gray-500">
+                Earth's biggest vacuum store
+              </span>
+            </Link>
           </div>
-          <div className="w-7/12 flex">
-            <a className="pr-12 hover:text-peach-500" href="/">
-              HOME
-            </a>
-            <a className="pr-12 hover:text-peach-500" href="/">
-              BRANDS
-            </a>
-            <a className="pr-12 hover:text-peach-500" href="/">
-              PRODUCTS
-            </a>
-            <a className="pr-12 hover:text-peach-500" href="/">
-              APPLICATIONS
-            </a>
-            <a className="pr-12 hover:text-peach-500" href="/">
-              CONTACT US
-            </a>
-            <a className="pr-12 hover:text-peach-500" href="/">
-              SERVICE
-            </a>
+          <div className="w-7/12 flex uppercase">
+            <Link
+              to="/"
+              className="pr-12 hover:text-peach-500"
+              activeClassName="text-peach-500"
+            >
+              Home
+            </Link>
+            <Link
+              to="/brands"
+              className="pr-12 hover:text-peach-500"
+              activeClassName="text-peach-500"
+            >
+              Brands
+            </Link>
+            <Link
+              to="/applications"
+              className="pr-12 hover:text-peach-500"
+              activeClassName="text-peach-500"
+            >
+              Applications
+            </Link>
+            <Link
+              to="/products"
+              className="pr-12 hover:text-peach-500"
+              activeClassName="text-peach-500"
+            >
+              Products
+            </Link>
+            <Link
+              to="/service"
+              className="pr-12 hover:text-peach-500"
+              activeClassName="text-peach-500"
+            >
+              Service
+            </Link>
+            <Link
+              to="/contact"
+              className="pr-12 hover:text-peach-500"
+              activeClassName="text-peach-500"
+            >
+              Contact us
+            </Link>
           </div>
           <div className="w-2/12 flex justify-start">
             <LanguageSelector />
             <CurrencySelector />
-            <a href="/" className="text-gray-500 px-4 text-xs">
+            <Link to="/login" className="text-gray-500 px-4 text-xs">
               Login
-            </a>
+            </Link>
           </div>
           <div className="w-1/12 flex justify-end">
             <div className="pl-4">
