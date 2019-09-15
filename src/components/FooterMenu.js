@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Link } from "gatsby"
 
 export default class FooterMenu extends Component {
   render() {
@@ -18,25 +19,39 @@ export default class FooterMenu extends Component {
             </h3>
             <ul>
               <li className="pb-2">
-                <a href="/">Careers</a>
+                <Link to="/Careers" className=" hover:text-gray-300">
+                  Careers
+                </Link>
               </li>
               <li className="pb-2">
-                <a href="/">Blog</a>
+                <Link to="/Blog" className=" hover:text-gray-300">
+                  Blog
+                </Link>
               </li>
               <li className="pb-2">
-                <a href="/">About Nowvac</a>
+                <Link to="/about-nowvac" className=" hover:text-gray-300">
+                  About Nowvac
+                </Link>
               </li>
               <li className="pb-2">
-                <a href="/">Investor relations</a>
+                <Link to="/investor-relations" className=" hover:text-gray-300">
+                  Investor Relations
+                </Link>
               </li>
               <li className="pb-2">
-                <a href="/">Our vendors</a>
+                <Link to="/our-vendors" className=" hover:text-gray-300">
+                  Our vendors
+                </Link>
               </li>
               <li className="pb-2">
-                <a href="/">FAQ</a>
+                <Link to="/faq" className=" hover:text-gray-300">
+                  FAQ
+                </Link>
               </li>
               <li className="pb-2">
-                <a href="/">Contact Us</a>
+                <Link to="/contact" className=" hover:text-gray-300">
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </section>
@@ -47,10 +62,14 @@ export default class FooterMenu extends Component {
             </h3>
             <ul>
               <li className="pb-2">
-                <a href="/">Sell on Nowvac</a>
+                <Link to="/sell" className=" hover:text-gray-300">
+                  Sell On Nowvac
+                </Link>
               </li>
               <li className="pb-2">
-                <a href="/">Sell your services on nowvac</a>
+                <Link to="/service-sell" className=" hover:text-gray-300">
+                  Sell your services on Nowvac
+                </Link>
               </li>
             </ul>
           </section>
@@ -60,25 +79,39 @@ export default class FooterMenu extends Component {
             </h3>
             <ul>
               <li className="pb-2">
-                <a href="/">Your Account</a>
+                <Link to="/your-account" className=" hover:text-gray-300">
+                  Your account
+                </Link>
               </li>
               <li className="pb-2">
-                <a href="/">Your Orders</a>
+                <Link to="/your-orders" className=" hover:text-gray-300">
+                  Your Orders
+                </Link>
               </li>
               <li className="pb-2">
-                <a href="/">Shipping Rates and Policies</a>
+                <Link to="/rates-policies" className=" hover:text-gray-300">
+                  Shipping rates and policies
+                </Link>
               </li>
               <li className="pb-2">
-                <a href="/">Returns and Replacements</a>
+                <Link to="/returns" className=" hover:text-gray-300">
+                  Returns and replacements
+                </Link>
               </li>
               <li className="pb-2">
-                <a href="/">Your Seller Account</a>
+                <Link to="/seller-account" className=" hover:text-gray-300">
+                  Your seller account
+                </Link>
               </li>
               <li className="pb-2">
-                <a href="/">Help</a>
+                <Link to="/help" className=" hover:text-gray-300">
+                  Help
+                </Link>
               </li>
               <li className="pb-2">
-                <a href="/">Contact Us</a>
+                <Link to="/contact" className=" hover:text-gray-300">
+                  Contact us
+                </Link>
               </li>
             </ul>
           </section>
