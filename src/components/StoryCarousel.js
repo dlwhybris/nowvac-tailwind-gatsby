@@ -10,7 +10,7 @@ export default class StoryCarousel extends Component {
           alt=""
         />
         <section className="-mt-64 px-4 text-white w-full mx-auto flex-col">
-          <div className="w-10/12 mx-auto flex flex-col items-center">
+          <div className="xl:w-10/12 mx-2 xl:mx-auto flex flex-col items-center">
             <h3 className="text-xs uppercase font-bold tracking-wider">
               Maecenas tempus
             </h3>

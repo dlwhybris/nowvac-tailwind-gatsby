@@ -4,7 +4,7 @@ export default class FooterBar extends Component {
   render() {
     return (
       <div className="bg-gray-900 text-gray-500 text-xs py-3">
-        <div className="w-10/12 mx-auto flex justify-between">
+        <div className="xl:w-10/12 mx-2 xl:mx-auto flex justify-between">
           <section>
             <p>
               All rights reserved. <strong>© 2018 NowVac.</strong>

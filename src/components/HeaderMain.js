@@ -7,7 +7,7 @@ export default class HeaderMain extends Component {
   render() {
     return (
       <div className="bg-white h-20 text-gray-900 font-bold text-sm">
-        <nav className="w-10/12 mx-auto flex items-center h-full">
+        <nav className="xl:w-10/12 mx-2 xl:mx-auto flex items-center h-full">
           <div className="w-2/12">
             <Link to="/">
               <img

@@ -5,7 +5,7 @@ export default class HeaderInfo extends Component {
   render() {
     return (
       <div className="bg-mango-500 h-12 text-gray-900 text-sm tracking-wide">
-        <div className="w-10/12 mx-auto flex items-center justify-between h-full">
+        <div className="xl:w-10/12 mx-2 xl:mx-auto flex items-center justify-between h-full">
           <p className="">
             Save up to 50% with voucher code
             <span className="font-bold"> 50NOWVAC </span>

@@ -4,7 +4,7 @@ export default class VideoBlock extends Component {
   render() {
     return (
       <section className="bg-white py-24">
-        <div className="w-10/12 mx-auto flex justify-between px-16">
+        <div className="xl:w-10/12 mx-2 xl:mx-auto flex justify-between px-16">
           <div className="pr-8 w-1/2">
             <iframe
               className="w-full h-88"

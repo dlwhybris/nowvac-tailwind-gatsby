@@ -6,7 +6,7 @@ export default class Recommendations extends Component {
   render() {
     return (
       <section className="bg-gray-200 py-4">
-        <div className="w-10/12 mx-auto">
+        <div className="xl:w-10/12 mx-2 xl:mx-auto">
           <h2 className="text-sm font-medium uppercase text-gray-600 pt-8 tracking-wide text-gray-400">
             Nowvac Online Shop
           </h2>

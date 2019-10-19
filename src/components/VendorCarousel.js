@@ -3,7 +3,7 @@ import React, { Component } from "react"
 export default class VendorCarousel extends Component {
   render() {
     return (
-      <div className="w-10/12 mx-auto flex items-center h-full flex-wrap text-sm">
+      <div className="xl:w-10/12 mx-2 xl:mx-auto flex items-center h-full flex-wrap text-sm">
         <div className="w-8/12 flex items-center">
           <a className="-ml-8 pr-8" href="/">
             <svg

@@ -5,7 +5,7 @@ export default class FooterMenu extends Component {
   render() {
     return (
       <footer className="bg-gray-800 text-gray-500 text-sm py-12">
-        <div className="w-10/12 mx-auto flex justify-between">
+        <div className="xl:w-10/12 mx-2 xl:mx-auto flex justify-between">
           <section>
             <img
               className="w-32"
