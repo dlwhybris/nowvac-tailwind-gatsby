@@ -5,7 +5,7 @@ import HeaderMain from "./HeaderMain"
 
 function Header() {
   return (
-    <header>
+    <header className="shadow-lg border-b-4 border-gray-200">
       <HeaderInfo />
       <HeaderMeta />
       <HeaderMain />
