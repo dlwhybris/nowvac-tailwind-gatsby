@@ -3,7 +3,7 @@ import HeaderInfo from "./HeaderInfo"
 import HeaderMeta from "./HeaderMeta"
 import HeaderMain from "./HeaderMain"
 
-function Header() {
+function HeaderContainer() {
   return (
     <header className="shadow-lg border-b-4 border-gray-200">
       <HeaderInfo />
@@ -13,4 +13,4 @@ function Header() {
   )
 }
 
-export default Header
+export default HeaderContainer

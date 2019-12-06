@@ -1,13 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Header from "./Header"
+import HeaderContainer from "./HeaderContainer"
 import FooterMenu from "./FooterMenu"
 import FooterBar from "./FooterBar"
 
 function Layout({ children }) {
   return (
     <div>
-      <Header />
+      <HeaderContainer />
       {children}
       <FooterMenu />
       <FooterBar />

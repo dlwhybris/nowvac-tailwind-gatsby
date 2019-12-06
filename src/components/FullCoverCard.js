@@ -6,7 +6,7 @@ export default class FullCoverCard extends Component {
       <div className="h-120 bg-white p-1 mr-8 rounded-lg">
         <img
           className="h-full bg-cover"
-          src="http://placehold.it/990x620"
+          src="https://placehold.it/990x620"
           alt=""
         />
         <section className="-mt-20 px-4">

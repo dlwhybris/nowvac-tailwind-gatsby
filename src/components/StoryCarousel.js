@@ -6,7 +6,7 @@ export default class StoryCarousel extends Component {
       <div className="h-88 w-full">
         <img
           className="h-full w-full bg-cover"
-          src="http://placehold.it/1200x605"
+          src="https://placehold.it/1200x605"
           alt=""
         />
         <section className="-mt-64 px-4 text-white w-full mx-auto flex-col">

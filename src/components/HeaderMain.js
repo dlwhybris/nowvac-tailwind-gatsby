@@ -12,7 +12,7 @@ export default class HeaderMain extends Component {
             <Link to="/">
               <img
                 className="w-40"
-                src="http://nowvac.ljft.de/assets/img/logo.png"
+                src="https://nowvac.ljft.de/assets/img/logo.png"
                 alt=""
               />
               <span className="text-xs font-hairline text-gray-500">
