@@ -3,8 +3,6 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import FullCoverCard from "../components/FullCoverCard"
-import ProductCard from "../components/ProductCard"
 
 class NotFoundPage extends React.Component {
   render() {
