@@ -64,6 +64,7 @@ module.exports = {
   },
   variants: {
     fill: ["responsive", "hover", "focus"],
+    backgroundColor: ["responsive", "hover", "focus", "group-hover"],
   },
   plugins: [],
 }
