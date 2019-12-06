@@ -9,7 +9,7 @@ export default class FooterMenu extends Component {
           <section>
             <img
               className="w-32"
-              src="http://nowvac.ljft.de/assets/img/logo.png"
+              src="https://nowvac.ljft.de/assets/img/logo.png"
               alt=""
             />
           </section>
