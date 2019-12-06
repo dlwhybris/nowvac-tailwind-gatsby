@@ -4,7 +4,7 @@ export default class ProductGridItem extends Component {
   render() {
     return (
       <div className="bg-white p-1 mr-8 rounded-sm">
-        <img className="bg-cover" src="http://placehold.it/495x310" alt="" />
+        <img className="bg-cover" src="https://placehold.it/495x310" alt="" />
         <section className="px-4 py-4">
           <p className="text-peach-500 uppercase tracking-wide text-xs font-normal">
             Leybold

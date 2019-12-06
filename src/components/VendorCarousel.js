@@ -42,8 +42,16 @@ export default class VendorCarousel extends Component {
           </div>
         </div>
         <div className="w-4/12 flex justify-around items-center">
-          <img className="w-48 py-4" src="http://placehold.it/495x310" alt="" />
-          <img className="w-48 py-4" src="http://placehold.it/495x310" alt="" />
+          <img
+            className="w-48 py-4"
+            src="https://placehold.it/495x310"
+            alt=""
+          />
+          <img
+            className="w-48 py-4"
+            src="https://placehold.it/495x310"
+            alt=""
+          />
 
           <a className="-mr-8" href="/">
             <svg
