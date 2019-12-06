@@ -43,7 +43,7 @@ export default class HeaderMain extends Component {
               Applications
             </Link>
             <Link
-              to="/products"
+              to="/product-list"
               className="pr-12 hover:text-peach-500"
               activeClassName="text-peach-500"
             >
