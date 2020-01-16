@@ -4,12 +4,12 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const NotFoundPage = ({ props: data }) => {
-  console.log(data)
+const NotFoundPage = props => {
+  const { data, location } = props
   const { title: siteTitle } = data.site.siteMetadata.title
 
   return (
-    <Layout location={data.location} title={siteTitle}>
+    <Layout location={location} title={siteTitle}>
       <SEO title="404: Not Found" />
 
       <div className="xl:w-10/12 mx-2 xl:mx-auto">
