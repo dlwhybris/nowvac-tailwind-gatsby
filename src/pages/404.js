@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const NotFoundPage = ({ props: data }) => {
+  console.log(data)
   const { title: siteTitle } = data.site.siteMetadata.title
 
   return (

@@ -4,7 +4,7 @@ import HeaderContainer from "./HeaderContainer"
 import FooterMenu from "./FooterMenu"
 import FooterBar from "./FooterBar"
 
-function Layout({ children }) {
+const Layout = ({ children }) => {
   return (
     <div>
       <HeaderContainer />
@@ -15,8 +15,8 @@ function Layout({ children }) {
   )
 }
 
+export default Layout
+
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
-
-export default Layout

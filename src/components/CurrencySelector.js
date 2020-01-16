@@ -1,14 +1,15 @@
-import React, { Component } from "react"
+import React from "react"
 
-export default class CurrencySelector extends Component {
-  render() {
-    return (
-      <div className="px-4 text-xs">
-        <select name="" id="">
-          <option value="USD">USD</option>
-          <option value="EUR">EUR</option>
-        </select>
-      </div>
-    )
-  }
+const CurrencySelector = () => {
+  return (
+    <div className="px-4 text-xs">
+      {/* TODO: Add dropdown component */}
+      <select name="" id="">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+      </select>
+    </div>
+  )
 }
+
+export default CurrencySelector
