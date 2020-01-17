@@ -8,22 +8,20 @@ import VideoBlock from "../components/VideoBlock"
 import StoryCarousel from "../components/StoryCarousel"
 import ContactBlock from "../components/ContactBlock"
 
-class IndexPage extends React.Component {
-  render() {
-    return (
-      <Layout location={this.props.location}>
-        <SEO title="Homepage" />
-        <main className="w-full text-gray-900 antialiased">
-          <Hero />
-          <VendorCarousel />
-          <Recommendations />
-          <VideoBlock />
-          <StoryCarousel />
-          <ContactBlock />
-        </main>
-      </Layout>
-    )
-  }
+const IndexPage = location => {
+  return (
+    <Layout location={location}>
+      <SEO title="Homepage" />
+      <main className="w-full text-gray-900 antialiased">
+        <Hero />
+        <VendorCarousel />
+        <Recommendations />
+        <VideoBlock />
+        <StoryCarousel />
+        <ContactBlock />
+      </main>
+    </Layout>
+  )
 }
 
 export default IndexPage
