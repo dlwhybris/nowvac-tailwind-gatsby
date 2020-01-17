@@ -1,4 +1,5 @@
 import React from "react"
+import Svg from "./Svg"
 
 const VenderCarousel = () => {
   return (
@@ -26,17 +27,12 @@ const VenderCarousel = () => {
 
           <div className="uppercase font-bold flex hover:text-peach-500">
             <a href="/">Further info</a>
-            <svg
-              className="fill-current"
-              width="20"
-              height="20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"
-                fillRule="evenodd"
-              />
-            </svg>
+
+            <Svg
+              size={20}
+              classes="fill-current"
+              pathD="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"
+            />
           </div>
         </div>
       </div>
