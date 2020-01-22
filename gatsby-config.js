@@ -1,26 +1,16 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `Gatsby Tailwind Blog Starter`,
+    title: `Manufacturing demo store`,
     author: `Eli Colpaert`,
-    description: `Gatsby Tailwind Blog Starter including Netlify CMS`,
+    description: `Manufacturing demo store`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
-    social: {
-      twitter: `colpaerteli`,
-    },
   },
   plugins: [
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/authors`,
-        name: `authors`,
-      },
-    },
     `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-purgecss`,

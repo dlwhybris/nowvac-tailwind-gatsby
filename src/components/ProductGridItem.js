@@ -1,7 +1,6 @@
 import React from "react"
 
 const ProductGridItem = ({ product }) => {
-  console.log("product", product)
   return (
     <div className="bg-white p-1 mr-8 rounded-sm">
       <img className="bg-cover" src="https://placehold.it/495x310" alt="" />
