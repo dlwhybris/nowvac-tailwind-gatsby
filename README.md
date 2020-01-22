@@ -10,6 +10,10 @@
   Headless manufacturing storefront powered by SAP Commerce Cloud ccv2
 </h1>
 
+## Live demo
+
+[Live demo](https://competent-bose-8582ac.netlify.com/).
+
 ## 🚀 Quick start
 
 1.  **Installation**
