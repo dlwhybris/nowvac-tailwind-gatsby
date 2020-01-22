@@ -1,26 +1,16 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `Gatsby Tailwind Blog Starter`,
+    title: `Manufacturing demo store`,
     author: `Eli Colpaert`,
-    description: `Gatsby Tailwind Blog Starter including Netlify CMS`,
+    description: `Manufacturing demo store`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
-    social: {
-      twitter: `colpaerteli`,
-    },
   },
   plugins: [
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/authors`,
-        name: `authors`,
-      },
-    },
     `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-purgecss`,
@@ -34,6 +24,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
+      },
+    },
+    {
+      resolve: "gatsby-source-hybris",
+      options: {
+        url:
+          "https://api.c10zqj-delawarec1-d1-public.model-t.cc.commerce.ondemand.com/rest/v2/powertools/products/search?currentPage=0&fields=BASIC&pageSize=20",
       },
     },
     {

@@ -1,7 +1,10 @@
 import React from "react"
 import ProductGridItem from "./ProductGridItem"
+import { usePowertoolsProducts } from "../hooks/use-powertools-products"
 
 const ProductGrid = () => {
+  const products = usePowertoolsProducts()
+
   return (
     <div className="pt-8 pb-2 px-6">
       <h3 className="uppercase text-gray-600 font-semibold text-sm tracking-wider">
@@ -16,33 +19,11 @@ const ProductGrid = () => {
       </p>
       {/* add pagination and icons */}
       <div className="flex flex-wrap justify-between">
-        <div className="w-1/3 mb-12">
-          <ProductGridItem />
-        </div>
-        <div className="w-1/3 mb-12">
-          <ProductGridItem />
-        </div>
-        <div className="w-1/3 mb-12">
-          <ProductGridItem />
-        </div>
-        <div className="w-1/3 mb-12">
-          <ProductGridItem />
-        </div>
-        <div className="w-1/3 mb-12">
-          <ProductGridItem />
-        </div>
-        <div className="w-1/3 mb-12">
-          <ProductGridItem />
-        </div>
-        <div className="w-1/3 mb-12">
-          <ProductGridItem />
-        </div>
-        <div className="w-1/3 mb-12">
-          <ProductGridItem />
-        </div>
-        <div className="w-1/3 mb-12">
-          <ProductGridItem />
-        </div>
+        {products.map(entry => (
+          <div className="w-1/3 mb-12">
+            <ProductGridItem key={entry.node.code} product={entry.node} />
+          </div>
+        ))}
       </div>
     </div>
   )
