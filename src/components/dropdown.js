@@ -1,11 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Dropdown = ({ name, id, options }) => {
+const Dropdown = ({ name, id, className, options }) => {
   return (
-    <select name={name} id={id}>
+    <select name={name} id={id} className={className}>
       {options.map(option => (
-        <option value={option.value}>{option.text}</option>
+        <option key={option.value} value={option.value}>
+          {option.text}
+        </option>
       ))}
     </select>
   )
