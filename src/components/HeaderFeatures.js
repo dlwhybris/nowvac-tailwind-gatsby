@@ -20,7 +20,9 @@ const HeaderFeatures = () => {
             options={data}
           />
           <input className="bg-gray-100 h-10 w-112"></input>
-          <button className="bg-java-500 h-10 w-40 rounded-r-lg">Search</button>
+          <button className="bg-java-500 h-10 w-40 rounded-r-lg text-white font-bold">
+            Search
+          </button>
         </div>
 
         <div className="w-3/12 ml-auto justify-end">
