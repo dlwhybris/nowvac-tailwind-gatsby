@@ -22,42 +22,42 @@ const HeaderMain = () => {
         <div className="w-7/12 flex uppercase">
           <Link
             to="/"
-            className="pr-8 hover:text-peach-500"
+            className="pr-12 hover:text-peach-500"
             activeClassName="text-peach-500"
           >
             Home
           </Link>
           <Link
             to="/brands"
-            className="pr-8 hover:text-peach-500"
+            className="pr-12 hover:text-peach-500"
             activeClassName="text-peach-500"
           >
             Brands
           </Link>
           <Link
             to="/applications"
-            className="pr-8 hover:text-peach-500"
+            className="pr-12 hover:text-peach-500"
             activeClassName="text-peach-500"
           >
             Applications
           </Link>
           <Link
             to="/product-list"
-            className="pr-8 hover:text-peach-500"
+            className="pr-12 hover:text-peach-500"
             activeClassName="text-peach-500"
           >
             Products
           </Link>
           <Link
             to="/service"
-            className="pr-8 hover:text-peach-500"
+            className="pr-21 hover:text-peach-500"
             activeClassName="text-peach-500"
           >
             Service
           </Link>
           <Link
             to="/contact"
-            className="pr-8 hover:text-peach-500"
+            className="pr-12 hover:text-peach-500"
             activeClassName="text-peach-500"
           >
             Contact us
