@@ -1,6 +1,6 @@
 import React from "react"
 import BreadCrumb from "../Breadcrumb"
-import Dropdown from "../dropdown"
+import Dropdown from "../Dropdown"
 import Price from "../Price"
 import QuantitySelector from "./QuantitySelector"
 import ProductStatus from "./ProductStatus"
