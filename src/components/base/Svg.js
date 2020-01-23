@@ -1,6 +1,6 @@
 import React from "react"
 
-const Svg = ({ startX, startY, size, classes, pathD, fillRule }) => {
+const Svg = ({ startX, startY, size, classes, pathD, fillRule, transform }) => {
   return (
     <svg
       className={classes}
@@ -8,6 +8,7 @@ const Svg = ({ startX, startY, size, classes, pathD, fillRule }) => {
       viewBox={startX + " " + startY + " " + size + " " + size}
       widht={size}
       height={size}
+      transform={transform}
     >
       <path d={pathD} fillRule={fillRule} />
     </svg>

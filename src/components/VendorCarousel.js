@@ -1,6 +1,5 @@
 import React from "react"
 import Carousel from "./Carousel"
-import Svg from "./Svg"
 
 function renderSlides(data) {
   return data.spaces.map(data => (

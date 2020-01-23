@@ -1,5 +1,5 @@
 import React from "react"
-import Svg from "./Svg"
+import Svg from "./base/Svg"
 import Carousel from "./Carousel"
 
 function renderSlides(data) {
@@ -67,7 +67,7 @@ const StoryCarousel = () => {
   const configuration = {
     name: "storyCarousel",
     className: "h-120",
-    buttons: false,
+    buttons: true,
     buttonContentLeft: <div>left123</div>,
     buttonContentRight: <div>right123</div>,
     customContent: <div>customContent123</div>,

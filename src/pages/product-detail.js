@@ -1,14 +1,9 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-// import Hero from "../components/Hero"
-// import VendorCarousel from "../components/VendorCarousel"
-// import Recommendations from "../components/Recommendations"
-// import VideoBlock from "../components/VideoBlock"
-// import StoryCarousel from "../components/StoryCarousel"
-// import ContactBlock from "../components/ContactBlock"
-import ImageCarousel from "../components/imageCarousel"
-import ProductOrderCard from "../components/ProductOrderCard"
+import ImageCarousel from "../components/ImageCarousel"
+import ProductOrderCard from "../components/product/ProductOrderCard"
+import ProductInfoTab from "../components/product/ProductInfoTab"
 
 const ProductDetailPage = location => {
   return (
@@ -20,14 +15,10 @@ const ProductDetailPage = location => {
           <ImageCarousel />
           <ProductOrderCard />
         </div>
-        {/* <Recommendations /> */}
 
-        {/* <Hero />
-        <VendorCarousel />
-        <Recommendations />
-        <VideoBlock />
-        <StoryCarousel />
-        <ContactBlock /> */}
+        <div className="flex flex-row w-10/12 m-auto">
+          <ProductInfoTab />
+        </div>
       </main>
     </Layout>
   )

@@ -1,6 +1,6 @@
 import React from "react"
 import Dropdown from "./dropdown"
-import Svg from "./Svg"
+import Svg from "./base/Svg"
 
 const HeaderFeatures = () => {
   const data = [

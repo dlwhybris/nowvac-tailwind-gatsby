@@ -1,7 +1,7 @@
 import React from "react"
 import ProductCard from "./ProductCard"
 import FullCoverCard from "./FullCoverCard"
-import Svg from "./Svg"
+import Svg from "./base/Svg"
 
 const Recommendations = () => {
   return (

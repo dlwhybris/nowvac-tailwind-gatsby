@@ -1,5 +1,5 @@
 import React from "react"
-import Dropdown from "./dropdown"
+import Dropdown from "./Dropdown"
 
 const CurrencySelector = () => {
   const data = [
