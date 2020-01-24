@@ -1,4 +1,6 @@
 import React from "react"
+import ProductStatus from "./product/ProductStatus"
+import { Link } from "gatsby"
 
 const ProductGridItem = ({ product }) => {
   return (
@@ -12,14 +14,19 @@ const ProductGridItem = ({ product }) => {
         <p className="text-gray-500 uppercase text-xs pt-4">
           €{product.price.value}
         </p>
-        <button className="flex items-center text-white mt-12 mb-2 group">
-          <div className="bg-blue-400 group-hover:bg-peach-400 text-center font-medium py-4 px-2 rounded-l-sm">
+        <Link
+          to={`products/${product.code}`}
+          title={product.name}
+          className="flex items-center flex-grow text-white mt-12 mb-2 group"
+        >
+          <span className="bg-blue-400 group-hover:bg-peach-400 text-center font-medium py-4 px-2 rounded-l-sm">
             More information
-          </div>
-          <div className="bg-blue-500 group-hover:bg-peach-500 py-4 px-2 rounded-r-sm">
+          </span>
+          <span className="bg-blue-500 group-hover:bg-peach-500 py-4 px-2 rounded-r-sm">
             >
-          </div>
-        </button>
+          </span>
+        </Link>
+        <ProductStatus />
       </section>
     </div>
   )

@@ -30,7 +30,7 @@ module.exports = {
       resolve: "gatsby-source-hybris",
       options: {
         url:
-          "https://api.c10zqj-delawarec1-d1-public.model-t.cc.commerce.ondemand.com/rest/v2/powertools/products/search?currentPage=0&fields=BASIC&pageSize=20",
+          "https://api.c10zqj-delawarec1-d1-public.model-t.cc.commerce.ondemand.com/rest/v2/powertools/products/search?currentPage=0&fields=FULL&pageSize=20",
       },
     },
     {

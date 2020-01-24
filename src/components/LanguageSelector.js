@@ -1,13 +1,20 @@
 import React from "react"
+import Dropdown from "./Dropdown"
 
 const LanguageSelector = () => {
+  const options = [
+    { value: "EN", text: "EN" },
+    { value: "DE", text: "DE" },
+    { value: "NL", text: "NL" },
+  ]
+
   return (
     <div className="px-4 text-xs">
-      {/* TODO: Add dropdown component */}
-      <select name="" id="">
-        <option value="EN">EN</option>
-        <option value="DE">DE</option>
-      </select>
+      <Dropdown
+        id="languageSelector"
+        name="languageSelector"
+        options={options}
+      />
     </div>
   )
 }
