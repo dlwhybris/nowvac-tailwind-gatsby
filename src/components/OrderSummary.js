@@ -7,7 +7,7 @@ function OrderSummary() {
     <div className="w-full lg:w-1/3 lg:shadow-lg bg-white p-8 pt-12">
       <div className="flex justify-between mb-4">
         <h4 className="text-lg font-semibold">Order Summary</h4>
-        <span className="block bg-peach-600 px-3 py-1 rounded-lg text-white text-xs">
+        <span className="block bg-java-500 px-3 py-1 rounded-lg text-white text-xs">
           3
         </span>
       </div>

@@ -73,7 +73,7 @@ function CheckoutOverview() {
               </svg>
               <span>Back</span>
             </button>
-            <button className="group mt-6 uppercase flex rounded-lg bg-gray-400 px-5 py-3 items-center text-sm text-white tracking-wide font-medium hover:bg-peach-500">
+            <button className="group mt-6 uppercase flex rounded-lg bg-java-500 px-5 py-3 items-center text-sm text-white tracking-wide font-medium hover:bg-peach-500">
               <span>Place order</span>
               <svg
                 className="fill-current group-hover:transform-r-half group-hover:transition-linear w-5 h-5"
