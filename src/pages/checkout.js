@@ -1,8 +1,8 @@
 import React from "react"
 import ContactBlock from "../components/ContactBlock"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/Layout"
+import SEO from "../components/Seo"
 import CheckoutOverview from "../components/checkout/CheckoutOverview"
 import OrderSummary from "../components/OrderSummary"
 
