@@ -50,7 +50,7 @@ const HeaderMain = () => {
           </Link>
           <Link
             to="/service"
-            className="pr-21 hover:text-peach-500"
+            className="pr-40 hover:text-peach-500 hover:text-green-500"
             activeClassName="text-peach-500"
           >
             Service
