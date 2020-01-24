@@ -42,7 +42,7 @@ const HeaderMain = () => {
             Applications
           </Link>
           <Link
-            to="/product-list"
+            to="/products"
             className="pr-12 hover:text-peach-500"
             activeClassName="text-peach-500"
           >
