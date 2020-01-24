@@ -31,7 +31,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   products.forEach(product => {
     createPage({
-      path: product.node.code,
+      path: "products/" + product.node.code,
       component: productDetailTemplate,
       context: {
         code: product.node.code,

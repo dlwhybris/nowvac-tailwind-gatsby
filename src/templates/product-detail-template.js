@@ -5,16 +5,16 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const ProductDetailTemplate = props => {
-  const { data, location, pageContext } = props
-  const { powertoolsProduct } = data
-  const { code } = pageContext
+  const { data, location } = props
+  const { powertoolsProduct: product } = data
 
   return (
     <Layout location={location} title="Product Detail Page">
-      <SEO title="404: Not Found" />
+      <SEO title={product.name} />
 
       <div className="xl:w-10/12 mx-2 xl:mx-auto">
-        <h1>Product detail page for {code}</h1>
+        <h1>Product detail page for {product.name}</h1>
+        <pre>{JSON.stringify(product, null, 4)}</pre>
       </div>
     </Layout>
   )
@@ -26,6 +26,19 @@ export const pageQuery = graphql`
   query PowertoolsProductByCode($code: String!) {
     powertoolsProduct(code: { eq: $code }) {
       name
+      summary
+      description
+      price {
+        formattedValue
+      }
+      stock {
+        stockLevelStatus
+      }
+      classifications {
+        features {
+          name
+        }
+      }
     }
   }
 `
