@@ -1,4 +1,3 @@
-
 <p align="center">
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
@@ -8,12 +7,14 @@
 </a>
 </p>
 <h1 align="center">
-  Gatsby-Tailwind-Blog-Starter
+  Headless manufacturing storefront powered by SAP Commerce Cloud ccv2
 </h1>
-A Blog starter for Gatsby powered by Tailwind. Netlify CMS support is foreseen as well
+
+## Live demo
+
+[Live demo](https://competent-bose-8582ac.netlify.com/).
 
 ## 🚀 Quick start
-
 
 1.  **Installation**
 
@@ -41,12 +42,3 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 For full documentation, visit [tailwindcss.com](https://tailwindcss.com/).
 
 - **For testing purposes without any installation, you can start with [Tailwind Run](https://tailwind.run/new).** It's a browser based editor loading Tailwind by default so you can play around
-
-
-## 📔 Learning Netlify CMS with Gatsby
-
-Start from [this point](https://www.gatsbyjs.org/docs/sourcing-from-netlify-cms/#authenticating-with-github) in the Gatsby documentation to finish the set up for your personal Netlify CMS with authentication.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://https://github.com/azer53/gatsby-tailwind-starter)
