@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 
 const Tabs = ({ children, className }) => {
-  const [activeTabIndex, setActiveTab] = useState(1)
+  const [activeTabIndex, setActiveTab] = useState(0)
 
   function handleTabSelect(selectedTabIndex) {
     activeTabIndex !== selectedTabIndex && setActiveTab(selectedTabIndex)

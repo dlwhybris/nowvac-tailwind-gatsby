@@ -1,5 +1,5 @@
 import React from "react"
-import Svg from "./base/Svg"
+import Svg from "../base/Svg"
 import Carousel from "./Carousel"
 
 function renderSlides(data) {

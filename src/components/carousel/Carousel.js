@@ -1,6 +1,6 @@
 import React from "react"
 import AwesomeSlider from "react-awesome-slider"
-import "../css/carousel.css"
+import "../../css/carousel.css"
 
 const Carousel = ({ slides, configuration }) => {
   return (
