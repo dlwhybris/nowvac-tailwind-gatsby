@@ -3,11 +3,14 @@ import { Link } from "gatsby"
 
 const CheckoutStep = ({ name, number, completed }) => {
   return (
-    <div className="flex justify-between bg-gray-300 py-4 my-4 w-5/6 px-6 rounded-lg content-center">
+    <div className="lg:w-5/6 flex justify-between items-center bg-gray-300 py-4 my-4 px-6 rounded-lg">
       <h3 className="text-lg font-medium">{name}</h3>
       {completed ? (
-        <div className="flex content-center">
-          <Link className="text-gray-600 font-light underline pr-4 text-xs">
+        <div className="flex items-center">
+          <Link
+            to="/checkout"
+            className="text-gray-600 font-light underline pr-4 text-xs"
+          >
             Edit
           </Link>
           <svg
@@ -15,11 +18,11 @@ const CheckoutStep = ({ name, number, completed }) => {
             viewBox="0 0 20 20"
             className="block w-6 h-6"
           >
-            <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" fill-rule="evenodd" />
+            <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" fillRule="evenodd" />
           </svg>
         </div>
       ) : (
-        <div>{number}</div>
+        <div className="text-2xl font-bold">{number}</div>
       )}
     </div>
   )

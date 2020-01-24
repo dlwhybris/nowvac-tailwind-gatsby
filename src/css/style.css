@@ -4,3 +4,16 @@
 
 @tailwind utilities;
 
+@variants group-hover, hover, focus {
+  .transform-r-half {
+    transform: translateX(50%);
+  }
+
+  .transform-l-half {
+    transform: translateX(-50%);
+  }
+
+  .transition-linear {
+    transition: all 0.4s;
+  }
+}

@@ -18,7 +18,7 @@ const ProductGrid = () => {
         including, water, solvents, dilute acids and bases.
       </p>
       {/* add pagination and icons */}
-      <div className="flex flex-wrap justify-between">
+      <div className="flex flex-wrap">
         {products.map(entry => (
           <div className="w-1/3 mb-12">
             <ProductGridItem key={entry.node.code} product={entry.node} />

@@ -3,7 +3,7 @@ import Svg from "./base/Svg"
 
 const HeaderMeta = () => {
   return (
-    <div className="bg-gray-200">
+    <div className="hidden xl:block bg-gray-200">
       <div className="h-10 text-gray-600 text-xs tracking-wider uppercase xl:w-10/12 mx-2 xl:mx-auto font-hairline">
         <ul className="h-full flex justify-between items-center">
           <li className="hover:text-gray-800">GXS DRY SCREW VACUUM PUMPS</li>

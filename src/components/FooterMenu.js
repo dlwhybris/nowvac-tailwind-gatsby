@@ -1,11 +1,16 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 
 const FooterMenu = () => {
+  const [openFooter1, setOpenFooter1] = useState(false)
+  const [openFooter2, setOpenFooter2] = useState(false)
+  const [openFooter3, setOpenFooter3] = useState(false)
+  const [openFooter4, setOpenFooter4] = useState(false)
+
   return (
-    <footer className="bg-gray-800 text-gray-500 text-sm py-12">
-      <div className="xl:w-10/12 mx-2 xl:mx-auto flex justify-between">
-        <section>
+    <footer className="bg-gray-800 text-gray-500 text-sm py-4 xl:py-12">
+      <div className="xl:w-10/12 xl:mx-auto flex flex-col xl:flex-row xl:justify-between">
+        <section className="hidden xl:block">
           <img
             className="w-32"
             src="https://nowvac.ljft.de/assets/img/logo.png"
@@ -13,10 +18,20 @@ const FooterMenu = () => {
           />
         </section>
         <section>
-          <h3 className="uppercase tracking-wider pb-6 text-xs text-gray-600">
+          <h3
+            className="uppercase tracking-wider pb-3 mb-3 px-2 xl:px-0 text-xs text-gray-600 border-b xl:border-0"
+            onClick={() => setOpenFooter1(!openFooter1)}
+          >
             Get to know us
           </h3>
-          <ul>
+          <ul
+            className={
+              "border-b xl:border-0 pb-3 mb-3 px-2 xl:px-0 " +
+              (openFooter1
+                ? "transition-linear block"
+                : "transition-linear hidden xl:block")
+            }
+          >
             <li className="pb-2">
               <Link to="/Careers" className=" hover:text-gray-300">
                 Careers
@@ -56,10 +71,20 @@ const FooterMenu = () => {
         </section>
 
         <section>
-          <h3 className="uppercase tracking-wider pb-6 text-xs text-gray-600">
+          <h3
+            className="uppercase tracking-wider pb-3 mb-3 px-2 xl:px-0 text-xs text-gray-600 border-b xl:border-0"
+            onClick={() => setOpenFooter2(!openFooter2)}
+          >
             Making money with us
           </h3>
-          <ul>
+          <ul
+            className={
+              "border-b xl:border-0 pb-3 mb-3 px-2 xl:px-0 " +
+              (openFooter2
+                ? "transition-linear block"
+                : "transition-linear hidden xl:block")
+            }
+          >
             <li className="pb-2">
               <Link to="/sell" className=" hover:text-gray-300">
                 Sell On Nowvac
@@ -73,10 +98,20 @@ const FooterMenu = () => {
           </ul>
         </section>
         <section>
-          <h3 className="uppercase tracking-wider pb-6 text-xs text-gray-600">
+          <h3
+            className="uppercase tracking-wider pb-3 mb-3 px-2 xl:px-0 text-xs text-gray-600 border-b xl:border-0"
+            onClick={() => setOpenFooter3(!openFooter3)}
+          >
             Let us help you
           </h3>
-          <ul>
+          <ul
+            className={
+              "border-b xl:border-0 pb-3 mb-3 px-2 xl:px-0 " +
+              (openFooter3
+                ? "transition-linear block"
+                : "transition-linear hidden xl:block")
+            }
+          >
             <li className="pb-2">
               <Link to="/your-account" className=" hover:text-gray-300">
                 Your account
@@ -115,19 +150,32 @@ const FooterMenu = () => {
           </ul>
         </section>
         <section>
-          <h3 className="uppercase tracking-wider pb-6 text-xs text-gray-600">
+          <h3
+            className="uppercase tracking-wider pb-3 mb-3 px-2 xl:px-0 text-xs text-gray-600 border-b xl:border-0"
+            onClick={() => setOpenFooter4(!openFooter4)}
+          >
             Newsletter
           </h3>
-          <p className="pb-4">
-            Subscribe to our newsletter! Do not miss out on our offers and news.
-          </p>
-          <form action="">
-            <input
-              className="bg-transparent focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
-              type="email"
-              placeholder="jane@example.com"
-            />
-          </form>
+          <div
+            className={
+              "border-b xl:border-0 pb-3 mb-3 px-2 xl:px-0 " +
+              (openFooter4
+                ? "transition-linear block"
+                : "transition-linear hidden xl:block")
+            }
+          >
+            <p className="pb-4">
+              Subscribe to our newsletter! Do not miss out on our offers and
+              news.
+            </p>
+            <form action="">
+              <input
+                className="bg-transparent focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+                type="email"
+                placeholder="jane@example.com"
+              />
+            </form>
+          </div>
         </section>
       </div>
     </footer>

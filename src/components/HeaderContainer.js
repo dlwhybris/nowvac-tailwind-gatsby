@@ -6,10 +6,10 @@ import HeaderFeatures from "./HeaderFeatures"
 
 const HeaderContainer = () => {
   return (
-    <header className="shadow-lg border-b-4 border-gray-200">
+    <header className="relative border-gray-200 shadow-md">
       <HeaderInfo />
       <HeaderMeta />
-      <div className="my-3">
+      <div className="mt-3 pb-3">
         <HeaderMain />
         <HeaderFeatures />
       </div>
