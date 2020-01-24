@@ -1,13 +1,16 @@
 import React from "react"
+import Dropdown from "./Dropdown"
 
 const CurrencySelector = () => {
+  const data = [
+    { value: "EUR", text: "EUR" },
+    { value: "USD", text: "USD" },
+    { value: "NL", text: "NL" },
+  ]
+
   return (
     <div className="px-4 text-xs">
-      {/* TODO: Add dropdown component */}
-      <select name="" id="">
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-      </select>
+      <Dropdown id="currencySelector" name="currencySelector" options={data} />
     </div>
   )
 }
