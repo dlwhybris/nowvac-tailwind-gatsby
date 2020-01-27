@@ -4,7 +4,7 @@ import Svg from "./base/Svg"
 const ContactBlock = () => {
   return (
     <div className="w-full bg-white">
-      <div className="xl:w-10/12 mx-2 xl:mx-auto flex">
+      <div className="hidden xl:flex xl:w-10/12 mx-2 xl:mx-auto">
         <div className="w-1/3 border-r-2 border-gray-200  py-8">
           <h4 className="uppercase text-gray-500 text-xs py-4 tracking-wider">
             GET IN CONTACT

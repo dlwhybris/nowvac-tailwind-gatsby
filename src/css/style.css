@@ -4,3 +4,23 @@
 
 @tailwind utilities;
 
+@variants group-hover, hover, focus {
+  .transform-r-half {
+    transform: translateX(50%);
+  }
+
+  .transform-l-half {
+    transform: translateX(-50%);
+  }
+
+  .transition-linear {
+    transition: all 0.4s;
+  }
+
+  .dropdown-background-icon {
+    background: #edf2f7
+      url("data:image/svg+xml;utf8,<svg height='12' width='12' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'><path d='M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z' fillRule='evenodd'/></svg>")
+      no-repeat;
+    background-position: right 5px top 50%;
+  }
+}

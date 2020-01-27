@@ -6,11 +6,13 @@ const HeaderMeta = () => {
     <div className="bg-gray-200">
       <div className="h-10 text-gray-600 text-xs tracking-wider uppercase xl:w-10/12 mx-2 xl:mx-auto font-hairline">
         <ul className="h-full flex justify-between items-center">
-          <li className="hover:text-gray-800">GXS DRY SCREW VACUUM PUMPS</li>
-          <li className="hover:text-gray-800">
+          <li className="hidden xl:block hover:text-gray-800">
+            GXS DRY SCREW VACUUM PUMPS
+          </li>
+          <li className="hidden xl:block hover:text-gray-800">
             FREE DELIVERY FOR ALL ORDERS ABOVE 500,- EUR
           </li>
-          <li className="hover:text-gray-800">
+          <li className="hidden xl:block hover:text-gray-800">
             THE SCIENCE OF ADVANCED VACUUM
           </li>
           <li className="flex hover:text-gray-800 items-center">
