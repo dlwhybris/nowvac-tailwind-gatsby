@@ -4,13 +4,20 @@ import Svg from "./base/Svg"
 const FooterBar = () => {
   return (
     <div className="bg-gray-900 text-gray-500 text-xs py-3">
-      <div className="xl:w-10/12 mx-2 xl:mx-auto flex justify-between">
+      <section className="xl:hidden w-full">
+        <img
+          className="w-32 mx-auto my-4"
+          src="https://nowvac.ljft.de/assets/img/logo.png"
+          alt=""
+        />
+      </section>
+      <div className="mx-2 xl:w-10/12 xl:mx-auto flex flex-col-reverse items-center xl:flex-row xl:justify-between">
         <section>
           <p>
             All rights reserved. <strong>© 2018 NowVac.</strong>
           </p>
         </section>
-        <section>
+        <section className="my-2 xl:my-0">
           {/* TODO: Create Simple List Component */}
           <ul className="flex items-center">
             <li className="pr-4">
