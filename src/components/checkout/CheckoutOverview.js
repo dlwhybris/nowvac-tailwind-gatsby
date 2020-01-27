@@ -60,7 +60,7 @@ function CheckoutOverview() {
             </span>
           </div>
           <div className="flex justify-between">
-            <button className="group mt-6 uppercase flex rounded-lg bg-gray-400 px-5 py-3 items-center text-sm tracking-wide font-medium text-black hover:bg-gray-900 hover:text-white">
+            <button className="group mt-6 uppercase flex rounded-lg bg-gray-400 px-5 py-3 items-center text-sm tracking-wide font-medium text-black hover:bg-gray-900 hover:text-white focus:outline-none">
               <svg
                 className="fill-current group-hover:transform-l-half group-hover:transition-linear w-5 h-5"
                 viewBox="0 0 20 20"
@@ -73,7 +73,7 @@ function CheckoutOverview() {
               </svg>
               <span>Back</span>
             </button>
-            <button className="group mt-6 uppercase flex rounded-lg bg-java-500 px-5 py-3 items-center text-sm text-white tracking-wide font-medium hover:bg-peach-500">
+            <button className="group mt-6 uppercase flex rounded-lg bg-java-500 px-5 py-3 items-center text-sm text-white tracking-wide font-medium hover:bg-peach-500 focus:outline-none">
               <span>Place order</span>
               <svg
                 className="fill-current group-hover:transform-r-half group-hover:transition-linear w-5 h-5"
