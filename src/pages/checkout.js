@@ -14,7 +14,7 @@ const CheckoutPage = props => {
       <SEO title="Checkout" />
 
       <div className="bg-gray-200">
-        <div className="w-full lg:w-10/12 lg:mx-auto lg:flex pb-32">
+        <div className="w-full lg:w-10/12 lg:mx-auto lg:flex pb-0 lg:pb-32">
           <CheckoutOverview />
           <OrderSummary />
         </div>
