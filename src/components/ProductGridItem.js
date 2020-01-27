@@ -2,10 +2,22 @@ import React from "react"
 import ProductStatus from "./product/ProductStatus"
 import { Link } from "gatsby"
 
+const baseUrl =
+  "https://api.c10zqj-delawarec1-d1-public.model-t.cc.commerce.ondemand.com"
+
 const ProductGridItem = ({ product }) => {
+  console.log(product)
+  const url = `${baseUrl}${product.images[0].url}`
   return (
     <div className="bg-white p-1 mr-8 rounded-sm">
-      <img className="bg-cover" src="https://placehold.it/495x310" alt="" />
+      <div style={{ height: "10rem" }}>
+        <img
+          className="bg-cover w-full"
+          style={{ "max-height": "9rem" }}
+          src={url}
+          alt=""
+        />
+      </div>
       <section className="px-4 py-4">
         <p className="text-peach-500 uppercase tracking-wide text-xs font-normal">
           {product.code}

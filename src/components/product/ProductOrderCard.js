@@ -7,7 +7,7 @@ import ProductStatus from "./ProductStatus"
 import LinkWithMedia from "../base/LinkWithMedia"
 import Svg from "../base/Svg"
 
-const ProductOrderCard = () => {
+const ProductOrderCard = ({ product }) => {
   const breadcrumb = {
     crumbs: [
       {
@@ -19,7 +19,7 @@ const ProductOrderCard = () => {
         url: "https://www.google.com", //Replace with Link Component
       },
       {
-        text: "bla bla",
+        text: "product",
         url: "https://www.google.com", //Replace with Link Component
       },
     ],
@@ -45,26 +45,26 @@ const ProductOrderCard = () => {
         seperator="/"
       />
 
-      <h1 className="text-2xl font-medium mb-2 tracking-wide text-gray-400">
-        Nowvac Online Shop
+      <h1 className="text-2xl font-medium mb-2 tracking-wide text-gray-900">
+        {product.name}
       </h1>
 
       <div className="mb-8">
         <Dropdown
           id="currencySelector"
           name="currencySelector"
-          className="p-10 w-64"
+          className="p-10 w-2/3"
           options={motorSpeed}
         />
         <Dropdown
           id="currencySelector"
           name="currencySelector"
-          className="p-10 w-64"
+          className="p-10 w-2/3"
           options={pumpingSpeed}
         />
       </div>
 
-      <Price>
+      <Price price={product.price}>
         <span className="text-sm">incl. VAT</span>
       </Price>
 
@@ -80,7 +80,8 @@ const ProductOrderCard = () => {
         <LinkWithMedia
           to="https://google.be" //Change to Link Component
           text="Store availability"
-          className="flex flex-row m-2 text-sm"
+          className="flex flex-row w-1/3 items-center justify-center p-2 text-sm"
+          classText="font-bold"
           media={
             <Svg
               size={20}
@@ -92,8 +93,9 @@ const ProductOrderCard = () => {
         />
         <LinkWithMedia
           to="https://google.be" //Change to Link Component
-          text="Store availability"
-          className="flex flex-row m-2 text-sm"
+          text="Add to wishlist"
+          className="flex flex-row w-1/3 items-center justify-center p-2 text-sm"
+          classText="font-bold"
           media={
             <Svg
               size={20}
@@ -105,8 +107,9 @@ const ProductOrderCard = () => {
         />
         <LinkWithMedia
           to="https://google.be" //Change to Link Component
-          text="Store availability"
-          className="flex flex-row m-2 text-sm"
+          text="Product Questions?"
+          className="flex flex-row w-1/3 items-center justify-center p-2 text-sm"
+          classText="font-bold"
           media={
             <Svg
               size={20}

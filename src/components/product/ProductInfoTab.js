@@ -4,7 +4,7 @@ import TabList from "../tabs/TabList"
 import TabPanel from "../tabs/TabPanel"
 import TabListItem from "../tabs/TabListItem"
 
-const ProductInfoTab = () => {
+const ProductInfoTab = ({ product }) => {
   return (
     <Tabs className="w-3/5 pr-2 pt-8">
       <TabList className="flex flex-row mb-8">
@@ -20,18 +20,7 @@ const ProductInfoTab = () => {
       </TabList>
 
       <TabPanel className="m-4 ml-0">
-        <p>
-          <b>Mario</b> (<i>Japanese: マリオ Hepburn: Mario, [ma.ɾʲi.o]</i>) (
-          <i>English: /ˈmɑːrioʊ/; Italian: [ˈmaːrjo]</i>) is a fictional
-          character in the Mario video game franchise, owned by Nintendo and
-          created by Japanese video game designer Shigeru Miyamoto. Serving as
-          the company's mascot and the eponymous protagonist of the series,
-          Mario has appeared in over 200 video games since his creation.
-          Depicted as a short, pudgy, Italian plumber who resides in the
-          Mushroom Kingdom, his adventures generally center upon rescuing
-          Princess Peach from the Koopa villain Bowser. His younger brother and
-          sidekick is Luigi.
-        </p>
+        <p>{product.description}</p>
       </TabPanel>
 
       <TabPanel className="m-4 ml-0">

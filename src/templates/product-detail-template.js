@@ -1,22 +1,15 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/Layout"
-import SEO from "../components/Seo"
+import ProductDetailPage from "../pages/product-detail"
 
 const ProductDetailTemplate = props => {
   const { data, location } = props
   const { powertoolsProduct: product } = data
-
   return (
-    <Layout location={location} title="Product Detail Page">
-      <SEO title={product.name} />
-
-      <div className="xl:w-10/12 mx-2 xl:mx-auto">
-        <h1>Product detail page for {product.name}</h1>
-        <pre>{JSON.stringify(product, null, 4)}</pre>
-      </div>
-    </Layout>
+    <>
+      <ProductDetailPage location={location} product={product} />
+    </>
   )
 }
 
@@ -28,16 +21,16 @@ export const pageQuery = graphql`
       name
       summary
       description
-      price {
-        formattedValue
-      }
       stock {
         stockLevelStatus
       }
-      classifications {
-        features {
-          name
-        }
+      price {
+        formattedValue
+      }
+      images {
+        format
+        imageType
+        url
       }
     }
   }

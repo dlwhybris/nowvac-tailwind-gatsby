@@ -8,20 +8,21 @@ import ProductSpecifications from "../components/product/ProductSpecifications"
 import StoryCarousel from "../components/carousel/StoryCarousel"
 import RelatedProductsCarousel from "../components/carousel/RelatedProductsCarousel"
 
-const ProductDetailPage = location => {
+const ProductDetailPage = ({ location, product }) => {
   return (
-    <Layout location={location}>
-      <SEO title="Product Detail" />
+    <Layout location={location} title="Product Detail Page">
+      <SEO title={product.name} />
+
       <main className="w-full text-gray-900 antialiased">
         {/* Create a Generic Carousel that works for most */}
         <div className="flex flex-row w-10/12 m-auto">
-          <ImageCarousel />
-          <ProductOrderCard />
+          <ImageCarousel images={product.images} />
+          <ProductOrderCard product={product} />
         </div>
 
         <div className="flex flex-row w-10/12 m-auto">
-          <ProductInfoTab />
-          <ProductSpecifications />
+          <ProductInfoTab product={product} />
+          <ProductSpecifications product={product} />
         </div>
 
         <StoryCarousel />

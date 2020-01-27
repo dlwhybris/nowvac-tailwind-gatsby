@@ -11,6 +11,11 @@ export const usePowertoolsProducts = () => {
               price {
                 value
               }
+              images {
+                format
+                imageType
+                url
+              }
             }
           }
         }
