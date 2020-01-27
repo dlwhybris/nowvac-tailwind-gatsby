@@ -21,6 +21,7 @@ const FooterMenu = () => {
           <h3
             className="uppercase tracking-wider pb-3 mb-3 px-2 xl:px-0 text-xs text-gray-600 border-b xl:border-0"
             onClick={() => setOpenFooter1(!openFooter1)}
+            role="presentation"
           >
             Get to know us
           </h3>
@@ -74,6 +75,7 @@ const FooterMenu = () => {
           <h3
             className="uppercase tracking-wider pb-3 mb-3 px-2 xl:px-0 text-xs text-gray-600 border-b xl:border-0"
             onClick={() => setOpenFooter2(!openFooter2)}
+            role="presentation"
           >
             Making money with us
           </h3>
@@ -101,6 +103,7 @@ const FooterMenu = () => {
           <h3
             className="uppercase tracking-wider pb-3 mb-3 px-2 xl:px-0 text-xs text-gray-600 border-b xl:border-0"
             onClick={() => setOpenFooter3(!openFooter3)}
+            role="presentation"
           >
             Let us help you
           </h3>
@@ -153,6 +156,7 @@ const FooterMenu = () => {
           <h3
             className="uppercase tracking-wider pb-3 mb-3 px-2 xl:px-0 text-xs text-gray-600 border-b xl:border-0"
             onClick={() => setOpenFooter4(!openFooter4)}
+            role="presentation"
           >
             Newsletter
           </h3>

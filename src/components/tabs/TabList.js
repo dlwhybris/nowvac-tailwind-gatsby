@@ -11,11 +11,7 @@ const TabList = props => {
     })
   )
 
-  return (
-    <ul className={className} role="tablist">
-      {childrenWithProps}
-    </ul>
-  )
+  return <ul className={className}>{childrenWithProps}</ul>
 }
 
 export default TabList

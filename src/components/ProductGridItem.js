@@ -6,14 +6,13 @@ const baseUrl =
   "https://api.c10zqj-delawarec1-d1-public.model-t.cc.commerce.ondemand.com"
 
 const ProductGridItem = ({ product }) => {
-  console.log(product)
   const url = `${baseUrl}${product.images[0].url}`
   return (
     <div className="bg-white p-1 mr-8 rounded-sm">
       <div style={{ height: "10rem" }}>
         <img
           className="bg-cover w-full"
-          style={{ "max-height": "9rem" }}
+          style={{ maxHeight: "9rem" }}
           src={url}
           alt=""
         />
@@ -27,7 +26,7 @@ const ProductGridItem = ({ product }) => {
           €{product.price.value}
         </p>
         <Link
-          to={`products/${product.code}`}
+          to={`/products/${product.code}`}
           title={product.name}
           className="flex items-center flex-grow text-white mt-12 mb-2 group"
         >
