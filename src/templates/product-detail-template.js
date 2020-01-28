@@ -9,7 +9,7 @@ import ProductInfoTab from "../components/product/ProductInfoTab"
 import ProductSpecifications from "../components/product/ProductSpecifications"
 import StoryCarousel from "../components/carousel/StoryCarousel"
 import RelatedProductsCarousel from "../components/carousel/RelatedProductsCarousel"
-import ProductReviews from "../components/product/ProductReviews"
+import ProductReviews from "../components/product/review/ProductReviews"
 
 const ProductDetailTemplate = props => {
   const { data, location } = props
