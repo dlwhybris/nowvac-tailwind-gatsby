@@ -23,4 +23,20 @@
       no-repeat;
     background-position: right 5px top 50%;
   }
+
+  .input-active > label {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    color: #4a5568;
+    transform: translateX(0%);
+    transition: all 0.5s;
+  }
+
+  .input-focus > label {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    color: #12b5da;
+    transform: translateX(0%);
+    transition: all 0.5s;
+  }
 }
