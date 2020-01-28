@@ -9,8 +9,7 @@ import ProductInfoTab from "../components/product/ProductInfoTab"
 import ProductSpecifications from "../components/product/ProductSpecifications"
 import StoryCarousel from "../components/carousel/StoryCarousel"
 import RelatedProductsCarousel from "../components/carousel/RelatedProductsCarousel"
-
-// import ProductDetailPage from "../pages/product-detail"
+import ProductReviews from "../components/product/ProductReviews"
 
 const ProductDetailTemplate = props => {
   const { data, location } = props
@@ -36,6 +35,8 @@ const ProductDetailTemplate = props => {
         <div className="bg-gray-200">
           <RelatedProductsCarousel />
         </div>
+
+        <ProductReviews />
       </main>
     </Layout>
   )
