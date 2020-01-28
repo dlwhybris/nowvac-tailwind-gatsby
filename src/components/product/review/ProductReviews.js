@@ -132,7 +132,7 @@ function ProductReview({ reviews, productCode }) {
                 color1={"#CBD5E0"}
                 color2={"#FBB303"}
                 value={rating}
-                onChange={() => setRating(rating)}
+                onChange={newRating => setRating(newRating)}
               />
             </div>
             <button
