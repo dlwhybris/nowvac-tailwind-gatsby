@@ -7,7 +7,7 @@ import CheckoutOverview from "../components/checkout/CheckoutOverview"
 import OrderSummary from "../components/OrderSummary"
 
 const CheckoutPage = props => {
-  const { location } = props
+  const { /*data,*/ location } = props
 
   return (
     <Layout location={location} title="Checkout">

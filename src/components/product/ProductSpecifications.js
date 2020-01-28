@@ -55,12 +55,12 @@ const ProductSpecifications = () => {
         </li>
       </ul>
 
-      <div class="toggle-container">
-        <h3 class="mb-4 text-lg font-medium">Mains and manual</h3>
-        <ul class="flex flex-wrap w-full mb-8">
-          <li class="w-1/2 my-1">
-            <p class="pb-1 text-xl font-bold tracking-wider">123456789</p>
-            <p class="mb-4 uppercase text-xs text-gray-600">
+      <div className="toggle-container">
+        <h3 className="mb-4 text-lg font-medium">Mains and manual</h3>
+        <ul className="flex flex-wrap w-full mb-8">
+          <li className="w-1/2 my-1">
+            <p className="pb-1 text-xl font-bold tracking-wider">123456789</p>
+            <p className="mb-4 uppercase text-xs text-gray-600">
               Manual product no (PN)
             </p>
           </li>

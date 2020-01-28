@@ -2,7 +2,7 @@ import React from "react"
 
 const QuantitySelector = () => {
   return (
-    <div className="inline-flex flex-row justify-center bg-gray-200 w3/12 h-12 p-2 rounded leading-none">
+    <div className="inline-flex flex-row justify-center bg-gray-200 w1/3 h-12 p-2 rounded leading-none">
       <div className="flex-start bg-gray-300 p-2 rounded cursor-pointer">-</div>
       <input
         id="quantity"

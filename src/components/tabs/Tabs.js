@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 
 const Tabs = ({ children, className }) => {
   const [activeTabIndex, setActiveTab] = useState(0)
@@ -6,10 +6,6 @@ const Tabs = ({ children, className }) => {
   function handleTabSelect(selectedTabIndex) {
     activeTabIndex !== selectedTabIndex && setActiveTab(selectedTabIndex)
   }
-
-  useEffect(() => {
-    // setActiveTab(1)
-  })
 
   // Clone props children and add handleTabSelect
   const childrenWithProps = React.Children.map(children, (child, index) =>

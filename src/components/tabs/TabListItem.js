@@ -9,7 +9,8 @@ const TabListItem = props => {
     <li
       className={className + " " + activeClass}
       onClick={() => props.doTabSelect(currentTabIndex)}
-      aria-selected={selected ? "true" : "false"}
+      onKeyDown={() => props.doTabSelect(currentTabIndex)}
+      role="presentation"
     >
       {props.children}
     </li>

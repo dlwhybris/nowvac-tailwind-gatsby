@@ -24,7 +24,7 @@ function ProductReview() {
       reviewText:
         "Our company is x10 more profitable since using your technology. Chapeau!",
     },
-  ].map(review => <ProductReviewItem key={review.name} data={review} />)
+  ]
 
   const [isNameActive, setIsNameActive] = useState({
     focus: false,
@@ -35,24 +35,17 @@ function ProductReview() {
 
   function setClassNames(active, focus) {
     let classes = active ? "input-active" : ""
-    classes += focus ? " input-focus" : ""
-    return classes
+    return (classes += focus ? " input-focus" : "")
   }
 
-  function onBlurInput(e, setClasses) {
-    if (e.target.value === "") {
-      setClasses({ focus: false, active: false })
-    } else {
-      setClasses({ focus: false, active: true })
-    }
+  function handleInputBlur(e, setClasses) {
+    const isTargetEmpty = e.target.value === ""
+    setClasses({ focus: false, active: isTargetEmpty ? false : true })
   }
 
-  function onFocusInput(e, setClasses) {
-    if (e.target.value === "") {
-      setClasses({ focus: true, active: false })
-    } else {
-      setClasses({ focus: true, active: true })
-    }
+  function handleInputFocus(e, setClasses) {
+    const isTargetEmpty = e.target.value === ""
+    setClasses({ focus: true, active: isTargetEmpty ? false : true })
   }
 
   return (
@@ -65,7 +58,7 @@ function ProductReview() {
           >
             <label
               htmlFor="name"
-              class="absolute bg-white mx-2 my-6 text-gray-500 pointer-events-none"
+              className="absolute bg-white mx-2 my-6 text-gray-500 pointer-events-none"
             >
               Your Name
             </label>
@@ -74,8 +67,8 @@ function ProductReview() {
               id="name"
               type="text"
               className="w-full p-2 mt-4 rounded border border-gray-500 text-gray-700 focus:outline-none focus:border-java-500"
-              onFocus={e => onFocusInput(e, setIsNameActive)}
-              onBlur={e => onBlurInput(e, setIsNameActive)}
+              onFocus={e => handleInputFocus(e, setIsNameActive)}
+              onBlur={e => handleInputBlur(e, setIsNameActive)}
             />
           </div>
           <div
@@ -83,7 +76,7 @@ function ProductReview() {
           >
             <label
               htmlFor="email"
-              class="absolute bg-white mx-2 my-6 text-gray-500 pointer-events-none"
+              className="absolute bg-white mx-2 my-6 text-gray-500 pointer-events-none"
             >
               Your E-Mail-Address
             </label>
@@ -92,8 +85,8 @@ function ProductReview() {
               id="email"
               type="text"
               className="w-full p-2 mt-4 rounded border border-gray-500 text-gray-700 focus:outline-none focus:border-java-500"
-              onFocus={e => onFocusInput(e, setIsEmailActive)}
-              onBlur={e => onBlurInput(e, setIsEmailActive)}
+              onFocus={e => handleInputFocus(e, setIsEmailActive)}
+              onBlur={e => handleInputBlur(e, setIsEmailActive)}
             />
           </div>
           <div
@@ -101,15 +94,15 @@ function ProductReview() {
           >
             <label
               htmlFor="reviewText"
-              class="absolute bg-white mx-2 my-6 text-gray-500 pointer-events-none"
+              className="absolute bg-white mx-2 my-6 text-gray-500 pointer-events-none"
             >
               Review Text
             </label>
             <textarea
               id="reviewText"
               className="w-full p-2 mt-4 h-48 p-2 rounded border border-gray-500 text-gray-700 focus:outline-none focus:border-java-500"
-              onFocus={e => onFocusInput(e, setIsTextActive)}
-              onBlur={e => onBlurInput(e, setIsTextActive)}
+              onFocus={e => handleInputFocus(e, setIsTextActive)}
+              onBlur={e => handleInputBlur(e, setIsTextActive)}
             />
           </div>
           <div className="flex mt-4 justify-between items-center text-gray-700">
@@ -129,8 +122,10 @@ function ProductReview() {
         </div>
       </div>
       <div className="w-full xl:w-1/2 xl:pl-20">
-        <h1 className="text-2xl mb-4">Reviews (3)</h1>
-        {reviews}
+        <h1 className="text-2xl mb-4">Reviews ({reviews.length})</h1>
+        {reviews.map(review => (
+          <ProductReviewItem key={review.name} data={review} />
+        ))}
       </div>
     </div>
   )
