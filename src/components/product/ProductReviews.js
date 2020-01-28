@@ -56,8 +56,8 @@ function ProductReview() {
   }
 
   return (
-    <div className="flex justify-between w-10/12 py-16 m-auto">
-      <div className="w-1/2 pr-20">
+    <div className="py-16 mx-4 flex flex-col xl:flex-row xl:justify-between xl:w-10/12 xl:m-auto">
+      <div className="w-full xl:w-1/2 xl:pr-20">
         <h1 className="text-2xl">Write a review</h1>
         <div className="flex flex-col">
           <div
@@ -114,7 +114,7 @@ function ProductReview() {
           </div>
           <div className="flex mt-4 justify-between items-center text-gray-700">
             <div className="flex items-center">
-              <span className="mr-12">Your Rating</span>
+              <span className="mr-2 xl:mr-12">Your Rating</span>
               <ReactStars
                 size={20}
                 half={false}
@@ -128,7 +128,7 @@ function ProductReview() {
           </div>
         </div>
       </div>
-      <div className="w-1/2 pl-20">
+      <div className="w-full xl:w-1/2 xl:pl-20">
         <h1 className="text-2xl mb-4">Reviews (3)</h1>
         {reviews}
       </div>
