@@ -2,29 +2,10 @@ import React, { useState } from "react"
 import ProductReviewItem from "./ProductReviewItem"
 import ReactStars from "react-rating-stars-component"
 
-function ProductReview() {
-  const reviews = [
-    {
-      name: "Jon Doe",
-      date: "06. February 2019",
-      stars: 5,
-      reviewText:
-        "Have the pump, with additional pressure switch, only a short time in operation for garden irrigation.Zur life therefore I can not say anything. Quiet in operation, the flow rate is good and druckreich.Bei about 40 meters hose and lighter.",
-    },
-    {
-      name: "Maria St. Cullen",
-      date: "06. February 2019",
-      stars: 4,
-      reviewText: "Great products. Fast delivery.",
-    },
-    {
-      name: "Roger Smith",
-      date: "06. February 2019",
-      stars: 4,
-      reviewText:
-        "Our company is x10 more profitable since using your technology. Chapeau!",
-    },
-  ].map((review, index) => <ProductReviewItem key={index} data={review} />)
+function ProductReview({ reviews }) {
+  const displayReviews = reviews.map((review, index) => (
+    <ProductReviewItem key={index} review={review} />
+  ))
 
   const [isNameActive, setIsNameActive] = useState({
     focus: false,
@@ -129,8 +110,8 @@ function ProductReview() {
         </div>
       </div>
       <div className="w-full xl:w-1/2 xl:pl-20">
-        <h1 className="text-2xl mb-4">Reviews (3)</h1>
-        {reviews}
+        <h1 className="text-2xl mb-4">Reviews ({displayReviews.length})</h1>
+        {displayReviews}
       </div>
     </div>
   )

@@ -36,7 +36,7 @@ const ProductDetailTemplate = props => {
           <RelatedProductsCarousel />
         </div>
 
-        <ProductReviews />
+        <ProductReviews reviews={product.reviews} />
       </main>
     </Layout>
   )
@@ -55,6 +55,15 @@ export const pageQuery = graphql`
       }
       price {
         formattedValue
+      }
+      reviews {
+        rating
+        date(formatString: "DD MMMM YYYY", locale: "nl")
+        comment
+        headline
+        principal {
+          name
+        }
       }
       images {
         format
