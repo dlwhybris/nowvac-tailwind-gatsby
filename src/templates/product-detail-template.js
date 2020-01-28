@@ -1,15 +1,43 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import ProductDetailPage from "../pages/product-detail"
+import Layout from "../components/Layout"
+import SEO from "../components/Seo"
+import ImageCarousel from "../components/carousel/ImageCarousel"
+import ProductOrderCard from "../components/product/ProductOrderCard"
+import ProductInfoTab from "../components/product/ProductInfoTab"
+import ProductSpecifications from "../components/product/ProductSpecifications"
+import StoryCarousel from "../components/carousel/StoryCarousel"
+import RelatedProductsCarousel from "../components/carousel/RelatedProductsCarousel"
+
+// import ProductDetailPage from "../pages/product-detail"
 
 const ProductDetailTemplate = props => {
   const { data, location } = props
   const { powertoolsProduct: product } = data
   return (
-    <>
-      <ProductDetailPage location={location} product={product} />
-    </>
+    <Layout location={location} title="Product Detail Page">
+      <SEO title={product.name} />
+
+      <main className="w-full text-gray-900 antialiased">
+        {/* Create a Generic Carousel that works for most */}
+        <div className="flex flex-row w-10/12 m-auto">
+          <ImageCarousel images={product.images} />
+          <ProductOrderCard product={product} />
+        </div>
+
+        <div className="flex flex-row w-10/12 m-auto">
+          <ProductInfoTab product={product} />
+          <ProductSpecifications product={product} />
+        </div>
+
+        <StoryCarousel />
+
+        <div className="bg-gray-200">
+          <RelatedProductsCarousel />
+        </div>
+      </main>
+    </Layout>
   )
 }
 
