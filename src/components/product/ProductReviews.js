@@ -24,19 +24,31 @@ function ProductReview() {
       reviewText:
         "Our company is x10 more profitable since using your technology. Chapeau!",
     },
-  ].map(review => <ProductReviewItem key={review.name} data={review} />)
+  ].map((review, index) => <ProductReviewItem key={index} data={review} />)
 
   const [isNameActive, setIsNameActive] = useState({
     focus: false,
     active: false,
   })
-  const [isEmailActive, setIsEmailActive] = useState(false)
-  const [isTextActive, setIsTextActive] = useState(false)
+  const [isEmailActive, setIsEmailActive] = useState({
+    focus: false,
+    active: false,
+  })
+  const [isReviewTextActive, setIsReviewTextActive] = useState({
+    focus: false,
+    active: false,
+  })
 
-  function setClassNames(active, focus) {
-    let classes = active ? "input-active" : ""
-    classes += focus ? " input-focus" : ""
-    return classes
+  function setLabelState(labelState) {
+    return (
+      (labelState.focus
+        ? "mt-2 transition-linear transform-x-0 text-java-500 text-xs "
+        : "text-gray-500 ") +
+      (labelState.active && !labelState.focus
+        ? "mt-2 transition-linear transform-x-0 text-xs "
+        : "") +
+      "absolute bg-white mx-2 my-6 pointer-events-none"
+    )
   }
 
   function onBlurInput(e, setClasses) {
@@ -60,13 +72,8 @@ function ProductReview() {
       <div className="w-full xl:w-1/2 xl:pr-20">
         <h1 className="text-2xl">Write a review</h1>
         <div className="flex flex-col">
-          <div
-            className={setClassNames(isNameActive.active, isNameActive.focus)}
-          >
-            <label
-              htmlFor="name"
-              class="absolute bg-white mx-2 my-6 text-gray-500 pointer-events-none"
-            >
+          <div>
+            <label htmlFor="name" class={setLabelState(isNameActive)}>
               Your Name
             </label>
             <input
@@ -78,13 +85,8 @@ function ProductReview() {
               onBlur={e => onBlurInput(e, setIsNameActive)}
             />
           </div>
-          <div
-            className={setClassNames(isEmailActive.active, isEmailActive.focus)}
-          >
-            <label
-              htmlFor="email"
-              class="absolute bg-white mx-2 my-6 text-gray-500 pointer-events-none"
-            >
+          <div>
+            <label htmlFor="email" class={setLabelState(isEmailActive)}>
               Your E-Mail-Address
             </label>
             <input
@@ -96,20 +98,18 @@ function ProductReview() {
               onBlur={e => onBlurInput(e, setIsEmailActive)}
             />
           </div>
-          <div
-            className={setClassNames(isTextActive.active, isTextActive.focus)}
-          >
+          <div>
             <label
               htmlFor="reviewText"
-              class="absolute bg-white mx-2 my-6 text-gray-500 pointer-events-none"
+              class={setLabelState(isReviewTextActive)}
             >
               Review Text
             </label>
             <textarea
               id="reviewText"
               className="w-full p-2 mt-4 h-48 p-2 rounded border border-gray-500 text-gray-700 focus:outline-none focus:border-java-500"
-              onFocus={e => onFocusInput(e, setIsTextActive)}
-              onBlur={e => onBlurInput(e, setIsTextActive)}
+              onFocus={e => onFocusInput(e, setIsReviewTextActive)}
+              onBlur={e => onBlurInput(e, setIsReviewTextActive)}
             />
           </div>
           <div className="flex mt-4 justify-between items-center text-gray-700">
