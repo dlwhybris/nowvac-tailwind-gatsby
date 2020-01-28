@@ -2,10 +2,14 @@ import React, { useState } from "react"
 import ProductReviewItem from "./ProductReviewItem"
 import ReactStars from "react-rating-stars-component"
 
-function ProductReview({ reviews }) {
+function ProductReview({ reviews, productCode }) {
   const displayReviews = reviews.map((review, index) => (
     <ProductReviewItem key={index} review={review} />
   ))
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [comment, setComment] = useState("")
+  const [rating, setRating] = useState(0)
 
   const [isNameActive, setIsNameActive] = useState({
     focus: false,
@@ -19,6 +23,26 @@ function ProductReview({ reviews }) {
     focus: false,
     active: false,
   })
+
+  const postReview = event => {
+    event.preventDefault()
+
+    fetch(
+      `https://api.c10zqj-delawarec1-d1-public.model-t.cc.commerce.ondemand.com/rest/v2/powertools/products/${productCode}/reviews?fields=DEFAULT`,
+      {
+        method: "post",
+        body: JSON.stringify({
+          rating: rating,
+          alias: name,
+          headline: comment.slice(0, 20),
+          comment: comment,
+        }),
+        headers: { "Content-Type": "application/json" },
+      }
+    )
+      .then(res => res.json())
+      .then(json => console.log(json))
+  }
 
   function setLabelState(labelState) {
     return (
@@ -51,10 +75,10 @@ function ProductReview({ reviews }) {
   return (
     <div className="py-16 mx-4 flex flex-col xl:flex-row xl:justify-between xl:w-10/12 xl:m-auto">
       <div className="w-full xl:w-1/2 xl:pr-20">
-        <h1 className="text-2xl">Write a review</h1>
-        <div className="flex flex-col">
+        <h1 className="text-2xl">Write a review about {productCode}</h1>
+        <form className="flex flex-col" onSubmit={e => postReview(e)}>
           <div>
-            <label htmlFor="name" class={setLabelState(isNameActive)}>
+            <label htmlFor="name" className={setLabelState(isNameActive)}>
               Your Name
             </label>
             <input
@@ -64,10 +88,12 @@ function ProductReview({ reviews }) {
               className="w-full p-2 mt-4 rounded border border-gray-500 text-gray-700 focus:outline-none focus:border-java-500"
               onFocus={e => handleInputFocus(e, setIsNameActive)}
               onBlur={e => handleInputBlur(e, setIsNameActive)}
+              value={name}
+              onChange={e => setName(e.target.value)}
             />
           </div>
           <div>
-            <label htmlFor="email" class={setLabelState(isEmailActive)}>
+            <label htmlFor="email" className={setLabelState(isEmailActive)}>
               Your E-Mail-Address
             </label>
             <input
@@ -77,12 +103,14 @@ function ProductReview({ reviews }) {
               className="w-full p-2 mt-4 rounded border border-gray-500 text-gray-700 focus:outline-none focus:border-java-500"
               onFocus={e => handleInputFocus(e, setIsEmailActive)}
               onBlur={e => handleInputBlur(e, setIsEmailActive)}
+              value={email}
+              onChange={e => setEmail(e.target.value)}
             />
           </div>
           <div>
             <label
               htmlFor="reviewText"
-              class={setLabelState(isReviewTextActive)}
+              className={setLabelState(isReviewTextActive)}
             >
               Review Text
             </label>
@@ -91,6 +119,8 @@ function ProductReview({ reviews }) {
               className="w-full p-2 mt-4 h-48 p-2 rounded border border-gray-500 text-gray-700 focus:outline-none focus:border-java-500"
               onFocus={e => handleInputFocus(e, setIsReviewTextActive)}
               onBlur={e => handleInputBlur(e, setIsReviewTextActive)}
+              value={comment}
+              onChange={e => setComment(e.target.value)}
             />
           </div>
           <div className="flex mt-4 justify-between items-center text-gray-700">
@@ -101,13 +131,18 @@ function ProductReview({ reviews }) {
                 half={false}
                 color1={"#CBD5E0"}
                 color2={"#FBB303"}
+                value={rating}
+                onChange={() => setRating(rating)}
               />
             </div>
-            <button className="uppercase flex rounded-lg bg-java-500 px-5 py-3 items-center text-sm text-white tracking-wide font-medium hover:bg-peach-500 focus:outline-none">
+            <button
+              type="submit"
+              className="uppercase flex rounded-lg bg-java-500 px-5 py-3 items-center text-sm text-white tracking-wide font-medium hover:bg-peach-500 focus:outline-none"
+            >
               Submit review
             </button>
           </div>
-        </div>
+        </form>
       </div>
       <div className="w-full xl:w-1/2 xl:pl-20">
         <h1 className="text-2xl mb-4">Reviews ({displayReviews.length})</h1>
