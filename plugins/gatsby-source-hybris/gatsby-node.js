@@ -5,7 +5,7 @@ exports.sourceNodes = async (
   { actions: { createNode }, createNodeId, createContentDigest },
   { plugins, ...options }
 ) => {
-  const apiUrl = `${options.url}?${queryString.stringify(
+  const apiUrl = `${options.url}products/search?${queryString.stringify(
     options.searchParameters
   )}`
   const productResponse = await fetch(apiUrl)
@@ -14,7 +14,7 @@ exports.sourceNodes = async (
   await Promise.all(
     productData.products.map(async product => {
       const reviewReponse = await fetch(
-        `https://api.c10zqj-delawarec1-d1-public.model-t.cc.commerce.ondemand.com/rest/v2/powertools/products/${product.code}/reviews?fields=DEFAULT`
+        `${options.url}products/${product.code}/reviews?fields=DEFAULT`
       )
       const reviewData = await reviewReponse.json()
       product.reviews = reviewData.reviews
