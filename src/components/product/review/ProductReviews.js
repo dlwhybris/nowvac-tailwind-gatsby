@@ -51,7 +51,7 @@ function ProductReview() {
     )
   }
 
-  function onBlurInput(e, setClasses) {
+  function handleInputBlur(e, setClasses) {
     if (e.target.value === "") {
       setClasses({ focus: false, active: false })
     } else {
@@ -59,7 +59,7 @@ function ProductReview() {
     }
   }
 
-  function onFocusInput(e, setClasses) {
+  function handleInputFocus(e, setClasses) {
     if (e.target.value === "") {
       setClasses({ focus: true, active: false })
     } else {
@@ -81,8 +81,8 @@ function ProductReview() {
               id="name"
               type="text"
               className="w-full p-2 mt-4 rounded border border-gray-500 text-gray-700 focus:outline-none focus:border-java-500"
-              onFocus={e => onFocusInput(e, setIsNameActive)}
-              onBlur={e => onBlurInput(e, setIsNameActive)}
+              onFocus={e => handleInputFocus(e, setIsNameActive)}
+              onBlur={e => handleInputBlur(e, setIsNameActive)}
             />
           </div>
           <div>
@@ -94,8 +94,8 @@ function ProductReview() {
               id="email"
               type="text"
               className="w-full p-2 mt-4 rounded border border-gray-500 text-gray-700 focus:outline-none focus:border-java-500"
-              onFocus={e => onFocusInput(e, setIsEmailActive)}
-              onBlur={e => onBlurInput(e, setIsEmailActive)}
+              onFocus={e => handleInputFocus(e, setIsEmailActive)}
+              onBlur={e => handleInputBlur(e, setIsEmailActive)}
             />
           </div>
           <div>
@@ -108,8 +108,8 @@ function ProductReview() {
             <textarea
               id="reviewText"
               className="w-full p-2 mt-4 h-48 p-2 rounded border border-gray-500 text-gray-700 focus:outline-none focus:border-java-500"
-              onFocus={e => onFocusInput(e, setIsReviewTextActive)}
-              onBlur={e => onBlurInput(e, setIsReviewTextActive)}
+              onFocus={e => handleInputFocus(e, setIsReviewTextActive)}
+              onBlur={e => handleInputBlur(e, setIsReviewTextActive)}
             />
           </div>
           <div className="flex mt-4 justify-between items-center text-gray-700">

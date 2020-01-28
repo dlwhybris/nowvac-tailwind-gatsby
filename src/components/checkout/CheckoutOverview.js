@@ -52,9 +52,13 @@ function CheckoutOverview() {
                 (isChecked ? "text-gray-800 font-semibold" : "text-gray-600")
               }
               onClick={() => setChecked(!isChecked)}
+              role="presentation"
             >
               I am confirming that i have read and agreed with the{" "}
-              <a href="" className="underline text-gray-800">
+              <a
+                href="https://www.google.com"
+                className="underline text-gray-800"
+              >
                 Terms & Conditions
               </a>
             </span>

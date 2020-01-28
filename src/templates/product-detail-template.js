@@ -3,19 +3,41 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
+import ImageCarousel from "../components/carousel/ImageCarousel"
+import ProductOrderCard from "../components/product/ProductOrderCard"
+import ProductInfoTab from "../components/product/ProductInfoTab"
+import ProductSpecifications from "../components/product/ProductSpecifications"
+import StoryCarousel from "../components/carousel/StoryCarousel"
+import RelatedProductsCarousel from "../components/carousel/RelatedProductsCarousel"
+import ProductReviews from "../components/product/review/ProductReviews"
 
 const ProductDetailTemplate = props => {
   const { data, location } = props
   const { powertoolsProduct: product } = data
-
   return (
     <Layout location={location} title="Product Detail Page">
       <SEO title={product.name} />
 
-      <div className="xl:w-10/12 mx-2 xl:mx-auto">
-        <h1>Product detail page for {product.name}</h1>
-        <pre>{JSON.stringify(product, null, 4)}</pre>
-      </div>
+      <main className="w-full text-gray-900 antialiased">
+        {/* Create a Generic Carousel that works for most */}
+        <div className="flex flex-row w-10/12 m-auto">
+          <ImageCarousel images={product.images} />
+          <ProductOrderCard product={product} />
+        </div>
+
+        <div className="flex flex-row w-10/12 m-auto">
+          <ProductInfoTab product={product} />
+          <ProductSpecifications product={product} />
+        </div>
+
+        <StoryCarousel />
+
+        <div className="bg-gray-200">
+          <RelatedProductsCarousel />
+        </div>
+
+        <ProductReviews />
+      </main>
     </Layout>
   )
 }
@@ -28,16 +50,16 @@ export const pageQuery = graphql`
       name
       summary
       description
-      price {
-        formattedValue
-      }
       stock {
         stockLevelStatus
       }
-      classifications {
-        features {
-          name
-        }
+      price {
+        formattedValue
+      }
+      images {
+        format
+        imageType
+        url
       }
     }
   }
