@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 @variants group-hover, hover, focus {
+  .transform-x-0 {
+    transform: translateX(0);
+  }
+
   .transform-r-half {
     transform: translateX(50%);
   }
@@ -22,21 +26,5 @@
       url("data:image/svg+xml;utf8,<svg height='12' width='12' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'><path d='M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z' fillRule='evenodd'/></svg>")
       no-repeat;
     background-position: right 5px top 50%;
-  }
-
-  .input-active > label {
-    font-size: 0.75rem;
-    margin-top: 0.5rem;
-    color: #4a5568;
-    transform: translateX(0%);
-    transition: all 0.5s;
-  }
-
-  .input-focus > label {
-    font-size: 0.75rem;
-    margin-top: 0.5rem;
-    color: #12b5da;
-    transform: translateX(0%);
-    transition: all 0.5s;
   }
 }
