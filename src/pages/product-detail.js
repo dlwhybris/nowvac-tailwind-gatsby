@@ -7,6 +7,7 @@ import ProductInfoTab from "../components/product/ProductInfoTab"
 import ProductSpecifications from "../components/product/ProductSpecifications"
 import StoryCarousel from "../components/carousel/StoryCarousel"
 import RelatedProductsCarousel from "../components/carousel/RelatedProductsCarousel"
+import ProductReviews from "../components/product/ProductReviews"
 
 const ProductDetailPage = location => {
   return (
@@ -29,6 +30,7 @@ const ProductDetailPage = location => {
         <div className="bg-gray-200">
           <RelatedProductsCarousel />
         </div>
+        <ProductReviews />
       </main>
     </Layout>
   )
