@@ -13,7 +13,7 @@ function HeaderSearch() {
       <Dropdown
         id="searchSelector"
         name="searchSelector"
-        className="hidden xl:block h-8 w-1/6 bg-gray-200 focus:outline-none appearance-none rounded-l rounded-r-none py-2 pl-2 pr-4 text-gray-900 uppercase tracking-wider font-semibold text-xs dropdown-background-icon"
+        selectClassName="hidden xl:block h-8 w-32 bg-gray-200 focus:outline-none appearance-none rounded-l rounded-r-none py-2 pl-2 pr-4 text-gray-900 uppercase tracking-wider font-semibold text-xs dropdown-background-icon"
         options={data}
       />
       <input

@@ -20,12 +20,12 @@ const ProductDetailTemplate = props => {
 
       <main className="w-full text-gray-900 antialiased">
         {/* Create a Generic Carousel that works for most */}
-        <div className="flex flex-row w-10/12 m-auto">
+        <div className="flex flex-row-reverse md:flex-row flex-wrap md:flex-no-wrap w-11/12 lg:w-10/12 m-auto">
           <ImageCarousel images={product.images} />
           <ProductOrderCard product={product} />
         </div>
 
-        <div className="flex flex-row w-10/12 m-auto">
+        <div className="flex flex-row flex-wrap md:flex-no-wrap w-11/12 lg:w-10/12 m-auto mt-20">
           <ProductInfoTab product={product} />
           <ProductSpecifications product={product} />
         </div>

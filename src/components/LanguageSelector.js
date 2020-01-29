@@ -13,6 +13,7 @@ const LanguageSelector = () => {
       <Dropdown
         id="languageSelector"
         name="languageSelector"
+        selectClassName="bg-white"
         options={options}
       />
     </div>

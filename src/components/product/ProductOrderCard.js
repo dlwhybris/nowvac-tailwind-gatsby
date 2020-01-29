@@ -37,7 +37,7 @@ const ProductOrderCard = ({ product }) => {
   ]
 
   return (
-    <div className="w-2/5 p-6 shadow-md">
+    <div className="w-full md:w-3/5 lg:w-2/5 p-6 shadow-md">
       <BreadCrumb
         data={breadcrumb}
         listClassName="text-xs mb-2 flex flex-row"
@@ -53,13 +53,17 @@ const ProductOrderCard = ({ product }) => {
         <Dropdown
           id="currencySelector"
           name="currencySelector"
-          className="p-10 w-2/3"
+          selectClassName="w-full h-10 p-2 mt-4 rounded bg-white border border-gray-500 text-gray-700 focus:outline-none focus:border-java-500"
+          labelText="Choose Motor"
+          labelClassName="mt-2 transition-linear transform-x-0 text-gray-900 text-xs absolute bg-white mx-2 my-6 pointer-events-none"
           options={motorSpeed}
         />
         <Dropdown
           id="currencySelector"
           name="currencySelector"
-          className="p-10 w-2/3"
+          selectClassName="w-full h-10 p-2 mt-4 rounded bg-white border border-gray-500 text-gray-700 focus:outline-none focus:border-java-500"
+          labelText="Choose Pumping Speed"
+          labelClassName="mt-2 transition-linear transform-x-0 text-gray-900 text-xs absolute bg-white mx-2 my-6 pointer-events-none"
           options={pumpingSpeed}
         />
       </div>
@@ -68,7 +72,7 @@ const ProductOrderCard = ({ product }) => {
         <span className="text-sm">incl. VAT</span>
       </Price>
 
-      <div className="mb-2">
+      <div className="flex w-full mb-2">
         <QuantitySelector />
         <button className="bg-java-500 w-2/3 h-12 ml-4 rounded-lg text-white font-bold">
           Add to shopping cart
@@ -76,11 +80,11 @@ const ProductOrderCard = ({ product }) => {
       </div>
       <ProductStatus showDeliveryOptions={true} />
 
-      <div className="flex flex-row">
+      <div className="flex flex-row flex-wrap">
         <LinkWithMedia
           to="https://google.be" //Change to Link Component
           text="Store availability"
-          className="flex flex-row w-1/3 items-center justify-center p-2 text-sm"
+          className="flex flex-row w-full md:w-1/3 items-center justify-start md:justify-center p-2 text-sm"
           classText="font-bold"
           media={
             <Svg
@@ -94,7 +98,7 @@ const ProductOrderCard = ({ product }) => {
         <LinkWithMedia
           to="https://google.be" //Change to Link Component
           text="Add to wishlist"
-          className="flex flex-row w-1/3 items-center justify-center p-2 text-sm"
+          className="flex flex-row w-full md:w-1/3 items-center justify-start md:justify-center p-2 text-sm"
           classText="font-bold"
           media={
             <Svg
@@ -108,7 +112,7 @@ const ProductOrderCard = ({ product }) => {
         <LinkWithMedia
           to="https://google.be" //Change to Link Component
           text="Product Questions?"
-          className="flex flex-row w-1/3 items-center justify-center p-2 text-sm"
+          className="flex flex-row w-full md:w-1/3 items-center justify-start md:justify-center p-2 text-sm"
           classText="font-bold"
           media={
             <Svg

@@ -6,8 +6,8 @@ import TabListItem from "../tabs/TabListItem"
 
 const ProductInfoTab = ({ product }) => {
   return (
-    <Tabs className="w-3/5 pr-2 pt-8">
-      <TabList className="flex flex-row mb-8">
+    <Tabs className="w-full md:w-3/5 pr-2">
+      <TabList className="flex flex-row items-center mb-8">
         <TabListItem className="pr-8 py-2" activeClass="font-bold">
           <span>Product Description</span>
         </TabListItem>

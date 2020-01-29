@@ -2,7 +2,7 @@ import React from "react"
 
 const ProductSpecifications = () => {
   return (
-    <div className="w-2/5 px-2 pt-20">
+    <div className="w-full md:w-2/5 px-2 pt-16">
       <h3 className="mb-4 text-lg font-medium">General Specifications</h3>
       <ul className="flex flex-wrap w-full mb-8">
         <li className="w-1/2 my-1">
