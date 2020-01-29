@@ -1,27 +1,19 @@
 import React from "react"
 import ProductGridItem from "./ProductGridItem"
 import { usePowertoolsProducts } from "../hooks/use-powertools-products"
+import ProductGridDescription from "./ProductGridDescription"
 
 const ProductGrid = () => {
   const products = usePowertoolsProducts()
 
   return (
-    <div className="pt-8 pb-2 px-6">
-      <h3 className="uppercase text-gray-600 font-semibold text-sm tracking-wider">
-        Products / Vacuum pumps
-      </h3>
-      <h1 className="text-3xl">nXDS Scroll Pumps</h1>
-      <p className="text-gray-700 tracking-wider text-sm pt-4 pb-8">
-        nXDS improves on legacy XDS pumps by offering increased pumping speeds,
-        combined with lower ultimate pressures, lower power consumption and
-        lower noise. Gas ballast allows for pumping of condensable vapours
-        including, water, solvents, dilute acids and bases.
-      </p>
+    <div className="pt-8 pb-2 px-2 lg:pl-6 lg:pr-0">
+      <ProductGridDescription className={"hidden lg:block"} />
       {/* add pagination and icons */}
-      <div className="flex flex-wrap">
+      <div className="flex flex-col md:flex-row flex-wrap">
         {products.map(entry => (
-          <div className="w-1/3 mb-12">
-            <ProductGridItem key={entry.node.code} product={entry.node} />
+          <div key={entry.node.code} className="w-full md:w-1/2 lg:w-1/3 mb-12">
+            <ProductGridItem product={entry.node} />
           </div>
         ))}
       </div>

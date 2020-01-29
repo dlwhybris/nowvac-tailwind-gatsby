@@ -6,22 +6,23 @@ import Svg from "./base/Svg"
 const Recommendations = () => {
   return (
     <section className="bg-gray-200 py-4">
-      <div className="xl:w-10/12 mx-2 xl:mx-auto">
+      <div className="mx-2 lg:w-10/12 lg:mx-auto">
         <h2 className="text-sm font-medium uppercase text-gray-600 pt-8 tracking-wide text-gray-400">
           Nowvac Online Shop
         </h2>
         <h3 className="text-4xl font-normal pb-8 leading-none">
           Recommandations for you
         </h3>
-        <div className="flex py-4">
-          <ProductCard />
-          <ProductCard />
+        <div className="flex flex-col md:flex-row py-4">
+          <div className="flex flex-col md:flex-row">
+            <ProductCard />
+            <ProductCard />
+          </div>
           <FullCoverCard />
         </div>
 
-        <button className="my-12 mx-auto uppercase flex rounded-lg bg-gray-400 px-5 py-3 items-center text-sm tracking-wide font-medium text-black hover:bg-gray-900 hover:text-white">
+        <button className="my-12 mx-auto uppercase flex rounded-lg bg-gray-400 px-5 py-3 items-center text-sm tracking-wide font-medium text-black hover:bg-gray-900 hover:text-white focus:outline-none">
           <p>All Products</p>
-
           <Svg
             size={20}
             classes="fill-current"

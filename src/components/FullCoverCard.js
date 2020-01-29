@@ -2,7 +2,7 @@ import React from "react"
 
 const FullCoverCard = () => {
   return (
-    <div className="h-120 bg-white p-1 mr-8 rounded-lg">
+    <div className="bg-white p-1 h-112 md:h-120 md:mr-8 rounded-lg">
       <img
         className="h-full bg-cover"
         src="https://placehold.it/990x620"

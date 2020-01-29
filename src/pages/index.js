@@ -14,10 +14,14 @@ const IndexPage = location => {
       <SEO title="Homepage" />
       <main className="w-full text-gray-900 antialiased">
         <Hero />
-        <VendorCarousel />
+        <div className="hidden xl:block">
+          <VendorCarousel />
+        </div>
         <Recommendations />
         <VideoBlock />
-        <StoryCarousel />
+        <div className="hidden xl:block">
+          <StoryCarousel />
+        </div>
         <ContactBlock />
       </main>
     </Layout>

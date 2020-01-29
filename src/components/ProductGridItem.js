@@ -1,17 +1,18 @@
 import React from "react"
 import ProductStatus from "./product/ProductStatus"
 import { Link } from "gatsby"
+import Svg from "./base/Svg"
 
 const baseUrl =
   "https://api.c10zqj-delawarec1-d1-public.model-t.cc.commerce.ondemand.com"
 
 const ProductGridItem = ({ product }) => {
-  const url = `${baseUrl}${product.images[0].url}`
+  const url = `${baseUrl}${product.images[1].url}`
   return (
-    <div className="bg-white p-1 mr-8 rounded-sm">
-      <div style={{ height: "10rem" }}>
+    <div className="bg-white p-1 md:mx-2 lg:mr-8 lg:ml-0 rounded-sm">
+      <div className="h-40 flex justify-center">
         <img
-          className="bg-cover w-full"
+          className="bg-cover"
           style={{ maxHeight: "9rem" }}
           src={url}
           alt=""
@@ -28,14 +29,20 @@ const ProductGridItem = ({ product }) => {
         <Link
           to={`/products/${product.code}`}
           title={product.name}
-          className="flex items-center flex-grow text-white mt-12 mb-2 group"
+          className="text-white mt-12 mb-2 group"
         >
-          <span className="bg-blue-400 group-hover:bg-peach-400 text-center font-medium py-4 px-2 rounded-l-sm">
-            More information
-          </span>
-          <span className="bg-blue-500 group-hover:bg-peach-500 py-4 px-2 rounded-r-sm">
-            >
-          </span>
+          <div className="flex flex-grow my-2">
+            <span className="bg-blue-400 group-hover:bg-peach-400 text-center font-medium py-3 px-2 rounded-l uppercase text-xs">
+              More information
+            </span>
+            <span className="flex items-center bg-blue-500 group-hover:bg-peach-500 py-3 px-3 rounded-r text-xs">
+              <Svg
+                size={18}
+                classes="fill-current"
+                pathD="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"
+              />
+            </span>
+          </div>
         </Link>
         <ProductStatus />
       </section>
