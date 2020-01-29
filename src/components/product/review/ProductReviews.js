@@ -27,16 +27,30 @@ function ProductReview({ reviews, productCode }) {
   const postReview = event => {
     event.preventDefault()
 
-    fetch(
-      `https://api.c10zqj-delawarec1-d1-public.model-t.cc.commerce.ondemand.com/rest/v2/powertools/products/${productCode}/reviews?fields=DEFAULT`,
+    //obtain bearer token like below via Curl
+    //curl -k -d "client_id=occ&client_secret=nimda&grant_type=client_credentials" -X POST https://api.c10zqj-delawarec1-d1-public.model-t.cc.commerce.ondemand.com/authorizationserver/oauth/token
+
+    /*     fetch(
+      "https://api.c10zqj-delawarec1-d1-public.model-t.cc.commerce.ondemand.com/authorizationserver/oauth/token",
       {
         method: "post",
-        body: JSON.stringify({
-          rating: rating,
-          alias: name,
-          headline: comment.slice(0, 20),
-          comment: comment,
-        }),
+        headers: {
+          client_secret: "nimda",
+          client_id: "occ",
+          grant_type: "client_credentials",
+        },
+      }
+    )
+      .then(res => res.json())
+      .then(json => console.log(json)) */
+
+    const review = { comment: "test", rating: "test", headline: "test" }
+
+    fetch(
+      `https://api.c10zqj-delawarec1-d1-public.model-t.cc.commerce.ondemand.com/rest/v2/powertools/products/${productCode}/reviews`,
+      {
+        method: "post",
+        body: JSON.stringify(review),
         headers: { "Content-Type": "application/json" },
       }
     )
