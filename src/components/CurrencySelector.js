@@ -10,7 +10,12 @@ const CurrencySelector = () => {
 
   return (
     <div className="px-4 text-xs">
-      <Dropdown id="currencySelector" name="currencySelector" options={data} />
+      <Dropdown
+        id="currencySelector"
+        name="currencySelector"
+        selectClassName="bg-white"
+        options={data}
+      />
     </div>
   )
 }

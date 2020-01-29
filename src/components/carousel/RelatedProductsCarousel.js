@@ -6,11 +6,11 @@ const RelatedProductsCarousel = () => {
   const products = usePowertoolsProducts()
 
   return (
-    <div className="w-10/12 py-16 m-auto">
+    <div className="w-11/12 lg:w-10/12 py-16 m-auto">
       <h1 className="text-2xl">Simular Products</h1>
       <ul className="flex flex-wrap justify-between">
         {products.slice(0, 4).map(entry => (
-          <div key={entry.node.code} className="w-1/4 mb-12">
+          <div key={entry.node.code} className="w-full md:w-1/2 lg:w-1/4 mb-12">
             <ProductGridItem key={entry.node.code} product={entry.node} />
           </div>
         ))}

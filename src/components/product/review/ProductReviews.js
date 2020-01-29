@@ -73,7 +73,7 @@ function ProductReview() {
         <h1 className="text-2xl">Write a review</h1>
         <div className="flex flex-col">
           <div>
-            <label htmlFor="name" class={setLabelState(isNameActive)}>
+            <label htmlFor="name" className={setLabelState(isNameActive)}>
               Your Name
             </label>
             <input
@@ -86,7 +86,7 @@ function ProductReview() {
             />
           </div>
           <div>
-            <label htmlFor="email" class={setLabelState(isEmailActive)}>
+            <label htmlFor="email" className={setLabelState(isEmailActive)}>
               Your E-Mail-Address
             </label>
             <input
@@ -101,7 +101,7 @@ function ProductReview() {
           <div>
             <label
               htmlFor="reviewText"
-              class={setLabelState(isReviewTextActive)}
+              className={setLabelState(isReviewTextActive)}
             >
               Review Text
             </label>
