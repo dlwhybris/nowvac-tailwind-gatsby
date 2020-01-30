@@ -12,7 +12,7 @@ import RelatedProductsCarousel from "../components/carousel/RelatedProductsCarou
 import ProductReviews from "../components/product/review/ProductReviews"
 
 const ProductDetailTemplate = props => {
-  const { data, location } = props
+  const { data, location, pageContext } = props
   const { powertoolsProduct: product } = data
   return (
     <Layout location={location} title="Product Detail Page">
@@ -36,7 +36,10 @@ const ProductDetailTemplate = props => {
           <RelatedProductsCarousel />
         </div>
 
-        <ProductReviews />
+        <ProductReviews
+          reviews={product.reviews}
+          productCode={pageContext.code}
+        />
       </main>
     </Layout>
   )
@@ -55,6 +58,15 @@ export const pageQuery = graphql`
       }
       price {
         formattedValue
+      }
+      reviews {
+        rating
+        date(formatString: "DD MMMM YYYY", locale: "nl")
+        comment
+        headline
+        principal {
+          name
+        }
       }
       images {
         format

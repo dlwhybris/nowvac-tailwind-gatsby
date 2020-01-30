@@ -2,29 +2,14 @@ import React, { useState } from "react"
 import ProductReviewItem from "./ProductReviewItem"
 import ReactStars from "react-rating-stars-component"
 
-function ProductReview() {
-  const reviews = [
-    {
-      name: "Jon Doe",
-      date: "06. February 2019",
-      stars: 5,
-      reviewText:
-        "Have the pump, with additional pressure switch, only a short time in operation for garden irrigation.Zur life therefore I can not say anything. Quiet in operation, the flow rate is good and druckreich.Bei about 40 meters hose and lighter.",
-    },
-    {
-      name: "Maria St. Cullen",
-      date: "06. February 2019",
-      stars: 4,
-      reviewText: "Great products. Fast delivery.",
-    },
-    {
-      name: "Roger Smith",
-      date: "06. February 2019",
-      stars: 4,
-      reviewText:
-        "Our company is x10 more profitable since using your technology. Chapeau!",
-    },
-  ].map((review, index) => <ProductReviewItem key={index} data={review} />)
+function ProductReview({ reviews, productCode }) {
+  const displayReviews = reviews.map((review, index) => (
+    <ProductReviewItem key={index} review={review} />
+  ))
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [comment, setComment] = useState("")
+  const [rating, setRating] = useState(0)
 
   const [isNameActive, setIsNameActive] = useState({
     focus: false,
@@ -38,6 +23,40 @@ function ProductReview() {
     focus: false,
     active: false,
   })
+
+  const postReview = event => {
+    event.preventDefault()
+
+    //obtain bearer token like below via Curl
+    //curl -k -d "client_id=occ&client_secret=nimda&grant_type=client_credentials" -X POST https://api.c10zqj-delawarec1-d1-public.model-t.cc.commerce.ondemand.com/authorizationserver/oauth/token
+
+    /*     fetch(
+      "https://api.c10zqj-delawarec1-d1-public.model-t.cc.commerce.ondemand.com/authorizationserver/oauth/token",
+      {
+        method: "post",
+        headers: {
+          client_secret: "nimda",
+          client_id: "occ",
+          grant_type: "client_credentials",
+        },
+      }
+    )
+      .then(res => res.json())
+      .then(json => console.log(json)) */
+
+    const review = { comment: "test", rating: "test", headline: "test" }
+
+    fetch(
+      `https://api.c10zqj-delawarec1-d1-public.model-t.cc.commerce.ondemand.com/rest/v2/powertools/products/${productCode}/reviews`,
+      {
+        method: "post",
+        body: JSON.stringify(review),
+        headers: { "Content-Type": "application/json" },
+      }
+    )
+      .then(res => res.json())
+      .then(json => console.log(json))
+  }
 
   function setLabelState(labelState) {
     return (
@@ -70,8 +89,8 @@ function ProductReview() {
   return (
     <div className="py-16 mx-4 flex flex-col xl:flex-row xl:justify-between xl:w-10/12 xl:m-auto">
       <div className="w-full xl:w-1/2 xl:pr-20">
-        <h1 className="text-2xl">Write a review</h1>
-        <div className="flex flex-col">
+        <h1 className="text-2xl">Write a review about {productCode}</h1>
+        <form className="flex flex-col" onSubmit={e => postReview(e)}>
           <div>
             <label htmlFor="name" className={setLabelState(isNameActive)}>
               Your Name
@@ -83,6 +102,8 @@ function ProductReview() {
               className="w-full p-2 mt-4 rounded border border-gray-500 text-gray-700 focus:outline-none focus:border-java-500"
               onFocus={e => handleInputFocus(e, setIsNameActive)}
               onBlur={e => handleInputBlur(e, setIsNameActive)}
+              value={name}
+              onChange={e => setName(e.target.value)}
             />
           </div>
           <div>
@@ -96,6 +117,8 @@ function ProductReview() {
               className="w-full p-2 mt-4 rounded border border-gray-500 text-gray-700 focus:outline-none focus:border-java-500"
               onFocus={e => handleInputFocus(e, setIsEmailActive)}
               onBlur={e => handleInputBlur(e, setIsEmailActive)}
+              value={email}
+              onChange={e => setEmail(e.target.value)}
             />
           </div>
           <div>
@@ -110,6 +133,8 @@ function ProductReview() {
               className="w-full p-2 mt-4 h-48 p-2 rounded border border-gray-500 text-gray-700 focus:outline-none focus:border-java-500"
               onFocus={e => handleInputFocus(e, setIsReviewTextActive)}
               onBlur={e => handleInputBlur(e, setIsReviewTextActive)}
+              value={comment}
+              onChange={e => setComment(e.target.value)}
             />
           </div>
           <div className="flex mt-4 justify-between items-center text-gray-700">
@@ -120,17 +145,22 @@ function ProductReview() {
                 half={false}
                 color1={"#CBD5E0"}
                 color2={"#FBB303"}
+                value={rating}
+                onChange={newRating => setRating(newRating)}
               />
             </div>
-            <button className="uppercase flex rounded-lg bg-java-500 px-5 py-3 items-center text-sm text-white tracking-wide font-medium hover:bg-peach-500 focus:outline-none">
+            <button
+              type="submit"
+              className="uppercase flex rounded-lg bg-java-500 px-5 py-3 items-center text-sm text-white tracking-wide font-medium hover:bg-peach-500 focus:outline-none"
+            >
               Submit review
             </button>
           </div>
-        </div>
+        </form>
       </div>
       <div className="w-full xl:w-1/2 xl:pl-20">
-        <h1 className="text-2xl mb-4">Reviews (3)</h1>
-        {reviews}
+        <h1 className="text-2xl mb-4">Reviews ({displayReviews.length})</h1>
+        {displayReviews}
       </div>
     </div>
   )
