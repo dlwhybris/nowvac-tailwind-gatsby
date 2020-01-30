@@ -1,6 +1,6 @@
 import React from "react"
 
-function ProductReviewItem({ data }) {
+function ProductReviewItem({ review }) {
   const stars = []
 
   for (let i = 0; i < 5; i++) {
@@ -9,7 +9,7 @@ function ProductReviewItem({ data }) {
         key={i}
         className={
           "fill-current w-5 h-5 " +
-          (i < data.stars ? "text-mango-500" : "text-gray-400")
+          (i < review.rating ? "text-mango-500" : "text-gray-400")
         }
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
@@ -25,11 +25,11 @@ function ProductReviewItem({ data }) {
   return (
     <div className="w-full mb-4 p-4 rounded bg-gray-200 text-sm">
       <div className="flex justify-between w-full">
-        <b>{data.name}</b>
-        <p className="text-gray-700">{data.date}</p>
+        <b>{review.principal.name}</b>
+        <p className="text-gray-700">{review.date}</p>
       </div>
       <div className="flex my-2">{stars}</div>
-      <p className="text-gray-700">{data.reviewText}</p>
+      <p className="text-gray-700">{review.comment}</p>
     </div>
   )
 }
