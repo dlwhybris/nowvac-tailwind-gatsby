@@ -34,7 +34,7 @@ const ProductGridItem = ({ product }) => {
           className="text-white mt-12 mb-2 group"
         >
           <div className="flex flex-grow my-2">
-            <span className="bg-blue-400 group-hover:bg-peach-400 text-center font-medium py-3 px-2 rounded-l uppercase text-xs">
+            <span className="bg-blue-400 group-hover:bg-yellow-400 text-center font-medium py-3 px-2 rounded-l uppercase text-xs">
               More information
             </span>
             <span className="flex items-center bg-blue-500 group-hover:bg-peach-500 py-3 px-3 rounded-r text-xs">
