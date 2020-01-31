@@ -3,6 +3,8 @@ import ProductStatus from "./product/ProductStatus"
 import { Link } from "gatsby"
 import Svg from "./base/Svg"
 
+// test
+
 const baseUrl =
   "https://api.c10zqj-delawarec1-d1-public.model-t.cc.commerce.ondemand.com"
 
