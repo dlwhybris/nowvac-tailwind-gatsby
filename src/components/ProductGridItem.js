@@ -36,6 +36,7 @@ const ProductGridItem = ({ product }) => {
               More information
             </span>
             <span className="flex items-center bg-blue-500 group-hover:bg-peach-500 py-3 px-3 rounded-r text-xs">
+              {/* <span className="flex items-center bg-blue-500 py-3 px-3 rounded-r text-xs"> */}
               <Svg
                 size={18}
                 classes="fill-current"
