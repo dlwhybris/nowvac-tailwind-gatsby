@@ -11,6 +11,7 @@ const Carousel1 = ({
   configuration,
   customLeftArrow,
   customRightArrow,
+  customDot,
 }) => {
   return (
     <Carousel
@@ -18,6 +19,7 @@ const Carousel1 = ({
       responsive={responsive}
       customLeftArrow={customLeftArrow}
       customRightArrow={customRightArrow}
+      customDot={customDot} // Custom navigation
     >
       {slides.map((slide, i) => (
         <div key={i}>{slide}</div>
