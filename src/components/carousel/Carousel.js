@@ -1,5 +1,4 @@
 import React from "react"
-import AwesomeSlider from "react-awesome-slider"
 import "../../css/carousel.css"
 
 import Carousel from "react-multi-carousel"

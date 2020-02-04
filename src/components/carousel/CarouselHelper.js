@@ -32,45 +32,59 @@ export const responsiveBreakpoints = (itemsOnPage, slidesOnAnimation) => {
   }
 }
 
+// **
+// Replace the primary carousel navigation
+// Wrapper - if not added carouselState will give error in fe logs
+const Arrow = arrowProps => {
+  const { carouselState, children, ...restArrowProps } = arrowProps
+  return <span {...restArrowProps}> {children} </span>
+}
+
 export const leftArrow = () => {
   return (
-    <button
-      className="absolute left-0 w-10 h-10 border-2 border-white border-solid rounded-full bg-transparant text-white"
-      style={{ left: "calc(4% + 1px)" }}
-      tabIndex="0"
-      role="button"
-      aria-label="Next slide"
-    >
-      <Svg
-        size={20}
-        transform="scale(1.5, 1.5)"
-        classes="m-auto fill-current"
-        pathD="M7.05 9.293L6.343 10 12 15.657l1.414-1.414L9.172 10l4.242-4.243L12 4.343z"
-      />
-    </button>
+    <Arrow>
+      <button
+        className="absolute left-0 w-10 h-10 border-2 border-white border-solid rounded-full bg-transparant text-white"
+        style={{ left: "calc(4% + 1px)" }}
+        tabIndex="0"
+        role="button"
+        aria-label="Next slide"
+      >
+        <Svg
+          size={20}
+          transform="scale(1.5, 1.5)"
+          classes="m-auto fill-current"
+          pathD="M7.05 9.293L6.343 10 12 15.657l1.414-1.414L9.172 10l4.242-4.243L12 4.343z"
+        />
+      </button>
+    </Arrow>
   )
 }
 
 export const rightArrow = () => {
   return (
-    <button
-      className="absolute right-0 w-10 h-10 border-2 border-white border-solid rounded-full bg-transparant text-white"
-      style={{ right: "calc(4% + 1px)" }}
-      tabIndex="1"
-      role="button"
-      aria-label="Next slide"
-    >
-      <Svg
-        size={20}
-        transform="scale(1.5, 1.5)"
-        classes="m-auto fill-current"
-        pathD="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"
-      />
-    </button>
+    <Arrow>
+      <button
+        className="absolute right-0 w-10 h-10 border-2 border-white border-solid rounded-full bg-transparant text-white"
+        style={{ right: "calc(4% + 1px)" }}
+        tabIndex="1"
+        role="button"
+        aria-label="Next slide"
+      >
+        <Svg
+          size={20}
+          transform="scale(1.5, 1.5)"
+          classes="m-auto fill-current"
+          pathD="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"
+        />
+      </button>
+    </Arrow>
   )
 }
 
-// Navigation node that renders the same as the content (=> image carousel)
+// **
+// Replaces the secundary carousel navigation (fe: dots)
+// Navigation node that renders the same as the content (fe: image carousel)
 export const renderCarouselPreview = (slides, className) => {
   return ({
     index,
