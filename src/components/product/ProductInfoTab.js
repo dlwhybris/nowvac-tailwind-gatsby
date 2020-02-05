@@ -20,7 +20,8 @@ const ProductInfoTab = ({ product }) => {
       </TabList>
 
       <TabPanel className="m-4 ml-0">
-        <p>{product.description}</p>
+        <p dangerouslySetInnerHTML={{ __html: product.description }}></p>
+        {/* {product.description} */}
       </TabPanel>
 
       <TabPanel className="m-4 ml-0">

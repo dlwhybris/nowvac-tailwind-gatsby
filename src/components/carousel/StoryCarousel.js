@@ -1,6 +1,7 @@
 import React from "react"
 import Svg from "../base/Svg"
 import Carousel from "./Carousel"
+import { responsiveBreakpoints, leftArrow, rightArrow } from "./CarouselHelper"
 
 function renderSlides(data) {
   return data.spaces.map(data => (
@@ -37,7 +38,7 @@ const StoryCarousel = () => {
       {
         image: [{ src: "https://placehold.it/1200x605", alt: "test" }],
         title: "Maecenas tempus",
-        subTitle: "Donec pede justo, fringilla vel, aliquet nec",
+        subTitle: "1 Donec pede justo, fringilla vel, aliquet nec",
         text: "Lorem ipsum dolor sit a ",
         button: [
           {
@@ -50,7 +51,46 @@ const StoryCarousel = () => {
       {
         image: [{ src: "https://placehold.it/1200x605", alt: "test" }],
         title: "Maecenas tempus",
-        subTitle: "Donec pede justo, fringilla vel, aliquet nec",
+        subTitle: "2 Donec pede justo, fringilla vel, aliquet nec",
+        text: "Lorem ipsum dolor sit a ",
+        button: [
+          {
+            text: "test",
+            svg:
+              "M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z",
+          },
+        ],
+      },
+      {
+        image: [{ src: "https://placehold.it/1200x605", alt: "test" }],
+        title: "Maecenas tempus",
+        subTitle: "3 Donec pede justo, fringilla vel, aliquet nec",
+        text: "Lorem ipsum dolor sit a ",
+        button: [
+          {
+            text: "test",
+            svg:
+              "M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z",
+          },
+        ],
+      },
+      {
+        image: [{ src: "https://placehold.it/1200x605", alt: "test" }],
+        title: "Maecenas tempus",
+        subTitle: "4 Donec pede justo, fringilla vel, aliquet nec",
+        text: "Lorem ipsum dolor sit a ",
+        button: [
+          {
+            text: "test",
+            svg:
+              "M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z",
+          },
+        ],
+      },
+      {
+        image: [{ src: "https://placehold.it/1200x605", alt: "test" }],
+        title: "Maecenas tempus",
+        subTitle: "5 Donec pede justo, fringilla vel, aliquet nec",
         text: "Lorem ipsum dolor sit a ",
         button: [
           {
@@ -63,17 +103,33 @@ const StoryCarousel = () => {
     ],
   }
 
-  //Static
   const configuration = {
     name: "storyCarousel",
     className: "h-120",
-    buttons: true,
-    buttonContentLeft: <div>left123</div>,
-    buttonContentRight: <div>right123</div>,
-    customContent: <div>customContent123</div>,
+    swipeable: false,
+    draggable: false,
+    showDots: true,
+    infinite: true,
+    keyBoardControl: true,
+    transitionDuration: 200,
+    removeArrowOnDeviceType: ["sm"],
+    dotListClass: "custom-dot-list-style",
+    slidesToSlide: 1,
   }
+  
+  const responsive = responsiveBreakpoints()
+  const customLeftArrow = leftArrow()
+  const customRightArrow = rightArrow()
 
-  return <Carousel slides={renderSlides(data)} configuration={configuration} />
+  return (
+    <Carousel
+      slides={renderSlides(data)}
+      responsive={responsive}
+      configuration={configuration}
+      customLeftArrow={customLeftArrow}
+      customRightArrow={customRightArrow}
+    />
+  )
 }
 
 export default StoryCarousel
