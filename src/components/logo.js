@@ -1,7 +1,6 @@
-import { Link } from "gatsby"
 import React from "react"
+import { Link } from "gatsby-plugin-intl"
 import { graphql, useStaticQuery } from "gatsby"
-import Svg from "./base/Svg"
 
 const Logo = () => {
   const data = useStaticQuery(graphql`

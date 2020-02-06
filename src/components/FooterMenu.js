@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
+import { Link } from "gatsby-plugin-intl"
 
 const FooterMenu = () => {
   const [openFooter1, setOpenFooter1] = useState(false)

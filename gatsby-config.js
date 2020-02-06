@@ -39,6 +39,15 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        path: `${__dirname}/plugins/gatsby-intl`,
+        languages: [`de`, `en`, `nl`],
+        defaultLanguage: `en`,
+        redirect: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Gatsby Tailwind Starter`,
