@@ -1,7 +1,7 @@
 import React from "react"
 import HeaderSearch from "./HeaderSearch"
 import Svg from "./base/Svg"
-import { Link } from "gatsby"
+import { Link } from "gatsby-plugin-intl"
 
 const HeaderFeatures = () => {
   return (

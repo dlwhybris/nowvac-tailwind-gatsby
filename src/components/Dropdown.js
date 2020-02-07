@@ -6,8 +6,10 @@ const Dropdown = ({
   id,
   selectClassName,
   options,
+  selectedOption,
   labelText,
   labelClassName,
+  onChange,
 }) => {
   return (
     <div className="relative">
@@ -17,9 +19,21 @@ const Dropdown = ({
         </label>
       )}
 
-      <select name={name} id={id} className={selectClassName}>
+      <select
+        name={name}
+        id={id}
+        className={selectClassName}
+        onChange={onChange}
+      >
         {options.map(option => (
-          <option key={option.value} value={option.value}>
+          <option
+            key={option.value}
+            value={option.value}
+            selected={
+              selectedOption &&
+              option.value.toLowerCase() === selectedOption.toLowerCase()
+            }
+          >
             {option.text}
           </option>
         ))}

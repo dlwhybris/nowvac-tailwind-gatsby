@@ -1,6 +1,6 @@
 import React from "react"
 import ProductStatus from "./product/ProductStatus"
-import { Link } from "gatsby"
+import { injectIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
 import Svg from "./base/Svg"
 
 const baseUrl =

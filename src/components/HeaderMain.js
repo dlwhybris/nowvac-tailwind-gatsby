@@ -1,9 +1,9 @@
 import React from "react"
 import LanguageSelector from "./LanguageSelector"
 import CurrencySelector from "./CurrencySelector"
-import { Link } from "gatsby"
+import { injectIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
 
-const HeaderMain = () => {
+const HeaderMain = ({ intl }) => {
   return (
     <div className="hidden xl:block bg-white h-15 text-gray-900 font-bold text-sm">
       <nav className="xl:w-10/12 mx-2 xl:mx-auto flex items-center h-full">
@@ -25,42 +25,42 @@ const HeaderMain = () => {
             className="pr-12 hover:text-peach-500"
             activeClassName="text-peach-500"
           >
-            Home
+            <FormattedMessage id="nav.home" />
           </Link>
           <Link
             to="/brands"
             className="pr-12 hover:text-peach-500"
             activeClassName="text-peach-500"
           >
-            Brands
+            <FormattedMessage id="nav.brands" />
           </Link>
           <Link
             to="/applications"
             className="pr-12 hover:text-peach-500"
             activeClassName="text-peach-500"
           >
-            Applications
+            <FormattedMessage id="nav.applications" />
           </Link>
           <Link
             to="/products"
             className="pr-12 hover:text-peach-500"
             activeClassName="text-peach-500"
           >
-            Products
+            <FormattedMessage id="nav.products" />
           </Link>
           <Link
             to="/service"
             className="pr-12 hover:text-peach-500"
             activeClassName="text-peach-500"
           >
-            Service
+            <FormattedMessage id="nav.service" />
           </Link>
           <Link
             to="/contact"
             className="pr-12 hover:text-peach-500"
             activeClassName="text-peach-500"
           >
-            Contact us
+            <FormattedMessage id="nav.contact_us" />
           </Link>
         </div>
         <div className="w-3/12 flex ml-auto justify-end">
@@ -75,4 +75,4 @@ const HeaderMain = () => {
   )
 }
 
-export default HeaderMain
+export default injectIntl(HeaderMain)
