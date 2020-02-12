@@ -4,6 +4,20 @@ if (process.env.NODE_ENV !== "production") {
   dotenv.config()
 }
 
+let contentfulConfig
+
+try {
+  // Load the Contentful config from the .contentful.json
+  contentfulConfig = require('./.contentful')
+} catch (_) {}
+
+// Overwrite the Contentful config with environment variables if they exist
+contentfulConfig = {
+  spaceId: process.env.CONTENTFUL_SPACE_ID || contentfulConfig.spaceId,
+  accessToken:
+      process.env.CONTENTFUL_DELIVERY_TOKEN || contentfulConfig.accessToken,
+}
+
 module.exports = {
   siteMetadata: {
     // edit below
@@ -32,24 +46,9 @@ module.exports = {
         name: `assets`,
       },
     },
-    // {
-    //   resolve: "gatsby-source-hybris",
-    //   options: {
-    //     url:
-    //       "https://api.c10zqj-delawarec1-d1-public.model-t.cc.commerce.ondemand.com/rest/v2/powertools/",
-    //     searchParameters: {
-    //       fields: "FULL",
-    //       pageSize: "20",
-    //       sort: "topRated",
-    //     },
-    //   },
-    // },
     {
       resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: `kibqv4vbf4jq`,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
+      options: contentfulConfig,
     },
     {
       resolve: `gatsby-plugin-intl`,
