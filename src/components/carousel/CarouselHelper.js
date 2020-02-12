@@ -46,8 +46,7 @@ export const leftArrow = () => {
       <button
         className="absolute left-0 w-10 h-10 border-2 border-white border-solid rounded-full bg-transparant text-white"
         style={{ left: "calc(4% + 1px)" }}
-        tabIndex="0"
-        role="button"
+        // tabIndex="0"
         aria-label="Next slide"
       >
         <Svg
@@ -67,8 +66,7 @@ export const rightArrow = () => {
       <button
         className="absolute right-0 w-10 h-10 border-2 border-white border-solid rounded-full bg-transparant text-white"
         style={{ right: "calc(4% + 1px)" }}
-        tabIndex="1"
-        role="button"
+        // tabIndex="0"
         aria-label="Next slide"
       >
         <Svg

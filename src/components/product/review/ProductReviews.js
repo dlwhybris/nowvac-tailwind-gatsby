@@ -3,9 +3,12 @@ import ProductReviewItem from "./ProductReviewItem"
 import ReactStars from "react-rating-stars-component"
 
 function ProductReview({ reviews, productCode }) {
-  const displayReviews = reviews.map((review, index) => (
-    <ProductReviewItem key={index} review={review} />
-  ))
+  const displayReviews =
+    reviews &&
+    reviews.map((review, index) => (
+      <ProductReviewItem key={index} review={review} />
+    ))
+
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [comment, setComment] = useState("")
@@ -158,10 +161,12 @@ function ProductReview({ reviews, productCode }) {
           </div>
         </form>
       </div>
-      <div className="w-full xl:w-1/2 xl:pl-20">
-        <h1 className="text-2xl mb-4">Reviews ({displayReviews.length})</h1>
-        {displayReviews}
-      </div>
+      {displayReviews && (
+        <div className="w-full xl:w-1/2 xl:pl-20">
+          <h1 className="text-2xl mb-4">Reviews ({displayReviews.length})</h1>
+          {displayReviews}
+        </div>
+      )}
     </div>
   )
 }

@@ -2,9 +2,6 @@ import React from "react"
 import Carousel from "./Carousel"
 import { responsiveBreakpoints, renderCarouselPreview } from "./CarouselHelper"
 
-const baseUrl =
-  "https://api.c10zqj-delawarec1-d1-public.model-t.cc.commerce.ondemand.com"
-
 function renderSlides(data) {
   return data.spaces.map(data => (
     <div key={data.url}>
@@ -16,8 +13,8 @@ function renderSlides(data) {
 const ImageCarousel = ({ images }) => {
   const data = {
     spaces: [
-      { url: `${baseUrl}${images[1].url}` },
-      { url: `${baseUrl}${images[1].url}` },
+      { url: `${images[0].file.url}` },
+      { url: `${images[0].file.url}` },
       { url: `https://placehold.it/1200x605` },
     ],
   }

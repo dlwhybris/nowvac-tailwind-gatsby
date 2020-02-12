@@ -25,11 +25,11 @@ function ProductReviewItem({ review }) {
   return (
     <div className="w-full mb-4 p-4 rounded bg-gray-200 text-sm">
       <div className="flex justify-between w-full">
-        <b>{review.principal.name}</b>
+        <b>{review.principalName}</b>
         <p className="text-gray-700">{review.date}</p>
       </div>
       <div className="flex my-2">{stars}</div>
-      <p className="text-gray-700">{review.comment}</p>
+      <p className="text-gray-700">{review.comment.comment}</p>
     </div>
   )
 }

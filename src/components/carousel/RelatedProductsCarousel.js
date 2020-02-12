@@ -3,7 +3,7 @@ import ProductGridItem from "../ProductGridItem"
 import Carousel from "./Carousel"
 import { responsiveBreakpoints } from "./CarouselHelper"
 
-import { usePowertoolsProducts } from "../../hooks/use-powertools-products"
+import { useProducts } from "../../hooks/use-products"
 
 function renderSlides(data) {
   return data
@@ -14,7 +14,7 @@ function renderSlides(data) {
 }
 
 const RelatedProductsCarousel = () => {
-  const products = usePowertoolsProducts()
+  const products = useProducts()
   const configuration = {
     name: "storyCarousel",
     className: "h-120",

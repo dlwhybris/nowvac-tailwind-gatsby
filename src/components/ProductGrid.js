@@ -1,10 +1,10 @@
 import React from "react"
 import ProductGridItem from "./ProductGridItem"
-import { usePowertoolsProducts } from "../hooks/use-powertools-products"
+import { useProducts } from "../hooks/use-products"
 import ProductGridDescription from "./ProductGridDescription"
 
 const ProductGrid = () => {
-  const products = usePowertoolsProducts()
+  const products = useProducts()
 
   return (
     <div className="pt-8 pb-2 px-2 lg:pl-6 lg:pr-0">

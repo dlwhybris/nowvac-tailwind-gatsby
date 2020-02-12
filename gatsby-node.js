@@ -7,14 +7,14 @@ exports.createPages = async ({ graphql, actions }) => {
   const productDetailTemplate = path.resolve(
     `./src/templates/product-detail-template.js`
   )
+
   const result = await graphql(
     `
       {
-        allPowertoolsProduct {
+        allContentfulProduct {
           edges {
             node {
-              code
-              name
+              sku
             }
           }
         }
@@ -27,14 +27,15 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   // Create products pages.
-  const products = result.data.allPowertoolsProduct.edges
+  const products = result.data.allContentfulProduct.edges
 
   products.forEach(product => {
+    console.log("products/" + product.node.sku)
     createPage({
-      path: "products/" + product.node.code,
+      path: "products/" + product.node.sku,
       component: productDetailTemplate,
       context: {
-        code: product.node.code,
+        sku: product.node.sku,
       },
     })
   })
