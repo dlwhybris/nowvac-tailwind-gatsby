@@ -1,16 +1,15 @@
-const queries = require("./src/utils/algolia")
-// Load .env config
+const queries = require("./src/algolia/indexing")
 const dotenv = require("dotenv")
-if (process.env.NODE_ENV !== "production") {
+//if (process.env.NODE_ENV !== "production") {
     dotenv.config()
-}
+//}
 
 module.exports = {
     siteMetadata: {
         // edit below
-        title: `Manufacturing demo store`,
-        author: `Eli Colpaert`,
-        description: `Manufacturing demo store`,
+        title: `Commerce2020`,
+        description: `Commerce2020`,
+        author: `delaware.pro`,
         siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
     },
     plugins: [
