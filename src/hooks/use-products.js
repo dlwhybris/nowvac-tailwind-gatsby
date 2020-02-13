@@ -18,9 +18,7 @@ export const useProducts = () => {
               productDescription {
                 productDescription
               }
-              productName {
-                productName
-              }
+              name
             }
           }
         }
