@@ -3,21 +3,14 @@ import Carousel from "./Carousel"
 import { responsiveBreakpoints, renderCarouselPreview } from "./CarouselHelper"
 
 function renderSlides(data) {
-  return data.spaces.map(data => (
-    <div key={data.url}>
-      <img className="bg-cover m-auto" src={data.url} alt="test" />
+    return data.map(data => (
+        <div key={data.file.url}>
+            <img className="bg-cover m-auto" src={data.file.url} alt="test"/>
     </div>
   ))
 }
 
 const ImageCarousel = ({ images }) => {
-  const data = {
-    spaces: [
-      { url: `${images[0].file.url}` },
-      { url: `${images[0].file.url}` },
-      { url: `https://placehold.it/1200x605` },
-    ],
-  }
 
   const configuration = {
     name: "imageCarousel",
@@ -31,17 +24,17 @@ const ImageCarousel = ({ images }) => {
   }
   const responsive = responsiveBreakpoints()
   const CustomDot = renderCarouselPreview(
-    renderSlides(data),
+      renderSlides(images),
     "w-1/12 mx-2 my-4"
   )
 
   return (
     <div className="w-full md:w-2/5 lg:w-3/5 justify-center align-middle">
       <Carousel
-        slides={renderSlides(data)}
-        responsive={responsive}
-        configuration={configuration}
-        customDot={<CustomDot />}
+          slides={renderSlides(images)}
+          responsive={responsive}
+          configuration={configuration}
+          customDot={<CustomDot />}
       />
     </div>
   )
