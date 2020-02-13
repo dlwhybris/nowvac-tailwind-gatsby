@@ -17,7 +17,7 @@ const ProductDetailTemplate = props => {
 
   return (
     <Layout location={location} title="Product Detail Page">
-      <SEO title={product.productName.productName} />
+        <SEO title={product.name}/>
 
       <main className="w-full text-gray-900 antialiased">
         {/* Create a Generic Carousel that works for most */}
