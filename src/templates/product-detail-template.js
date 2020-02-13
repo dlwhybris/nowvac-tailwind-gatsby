@@ -63,9 +63,7 @@ export const pageQuery = graphql`
       productDescription {
         productDescription
       }
-      productName {
-        productName
-      }
+      name
       review {
         date
         rating
