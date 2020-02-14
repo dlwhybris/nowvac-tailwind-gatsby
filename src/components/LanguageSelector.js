@@ -5,7 +5,6 @@ import { injectIntl, changeLocale } from "gatsby-plugin-intl"
 const LanguageSelector = ({ intl }) => {
   const options = [
     { value: "EN", text: "EN" },
-    { value: "DE", text: "DE" },
     { value: "NL", text: "NL" },
   ]
 
